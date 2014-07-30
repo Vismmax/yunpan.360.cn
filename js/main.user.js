@@ -1,11 +1,5 @@
-// ==UserScript==
-// @name        Yunpan.360.cn.ru
-// @namespace   Vismmax
-// @description Перевод сайта yunpan.360.cn
-// @include     *yunpan.360.cn/*
-// @version     0.3
-// @grant       none
-// ==/UserScript==
+//#include metadata.js
+
 
 //Перевод местами очень вольный
 
