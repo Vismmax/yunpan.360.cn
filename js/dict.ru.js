@@ -1,12 +1,13 @@
 var dict = {
 
-    'title'       : '360 Cloud Drive - бесплатное, неограниченное, безопасное пространство',   // 360云盘 - 安全免费 无限空间
-    'logo'        : '360 Cloud Drive',   // 360云盘
-    'nav_36'      : 'Получить 36T',   // 36T免费空间
-    'nav_home'    : 'Домой',   // 首页
-    'nav_group'   : 'Группы',   // 共享群
-    'nav_download': 'Скачать',   // 下载
-    'nav_forum'   : 'Форум',   // 论坛
+    'title'           : '360 Cloud Drive - бесплатное, неограниченное, безопасное пространство',   // 360云盘 - 安全免费 无限空间
+    'logo'            : 'Cloud Drive',   // 360云盘
+    'nav_36'          : 'Получить 36T',   // 36T免费空间
+    'nav_home'        : 'Домой',   // 首页
+    'nav_group'       : 'Группы',   // 共享群
+    'nav_download'    : 'Скачать',   // 下载
+    'nav_download_new': ' (Новая версия)',   //（有新版）
+    'nav_forum'       : 'Форум',   // 论坛
 
     'footer_agreement'  : 'Соглашение',   // 使用协议
     'footer_privacy'    : 'Конфиденциальность',   // 隐私保护
@@ -37,6 +38,7 @@ var dict = {
     'login_info_p'         : 'Вы вошли как:',   // 您当前正在使用的云盘帐号是：
     'login_logout'         : 'Выход>>',   // 更换帐号&gt;&gt;
     'login_dl_pc'          : 'PC с синхронизацией',   // PC同步版下载
+    'login_dl_apk'         : 'Android',   // 手机正式版下载 Для телефонов
     'login_dl_mac'         : 'Mac с синхронизацией',   // Mac同步版下载
     'login_qrcode'         : 'Сканировать для загрузки',   // 手机扫描 直接下载
     'login_noCookie'       : 'Для входа необходимо включить cookie',   // 浏览器已禁止设置cookie，无法正常登录，请
@@ -53,20 +55,27 @@ var dict = {
     'reg_tips_password'  : '6-20 символов (с учетом регистра)',   // 6-20个字符，（区分大小写）
     'reg_repassword'     : 'Подтвердите пароль',   // 确认密码
     'reg_tips_repassword': 'Пожалуйста, введите пароль еще раз',   // 请再次输入密码
+    'reg_phrase'         : 'Код подтверждения',   // 验证码
+    'reg_refreshCaptcha' : 'Обновить',   // 换一张
+    'reg_tips_phrase'    : 'Пожалуйста, введите буквы или цифры, без учета регистра',   // 请输入图中的字母或数字，不区分大小写
     'reg_agree'          : ' Я прочитал и согласен',   // 我已经阅读并同意
     'reg_fac_agree'      : '《360 Условия предоставления услуг》',   // 《360用户服务条款》
     'reg_submit'         : 'Зарегистрироваться',   // 立即注册
 
-    'my_title'              : '360 Cloud Drive - Мой диск',   // 360云盘 - 我的云盘
-    'topPanel_logo'         : 'Домашняя страница',   // 云盘首页
-    'topPanel_file'         : 'Файлы', // 网盘
-    'topPanel_file_title'   : 'Наиболее безопасный сетевой диск', // 最安全的网络U盘
-    'topPanel_xiangce'      : 'Фотоальбом', // 相册
-    'topPanel_xiangce_title': 'Фотоальбом', // 相册
-    'topPanel_collect'      : 'Коллекция', // 云收藏
-    'topPanel_collect_title': 'Сохраненные данные из браузера', // 从浏览器保存的内容
-    'topPanel_more'         : 'Больше', // 更多
-    'topPanel_more_title'   : 'Еще больше облачных сервисов', // 更多云服务
+    'my_title'                  : '360 Cloud Drive - Мой диск',   // 360云盘 - 我的云盘
+    'topPanel_logo'             : 'Домашняя страница',   // 云盘首页
+    'topPanel_file'             : 'Файлы', // 网盘
+    'topPanel_file_title'       : 'Наиболее безопасный сетевой диск', // 最安全的网络U盘
+    'topPanel_xiangce'          : 'Фотоальбом', // 相册
+    'topPanel_xiangce_title'    : 'Фотоальбом', // 相册
+    'topPanel_my_photo'         : 'Фотоальбом', // 云相册
+    'topPanel_my_photo_title'   : 'Фотоальбом', // 云相册
+    'topPanel_share_photo'      : 'Обмен фото', // 共享相册
+    'topPanel_share_photo_title': 'Обмен фото', // 共享相册
+    'topPanel_collect'          : 'Коллекция', // 云收藏
+    'topPanel_collect_title'    : 'Сохраненные данные из браузера', // 从浏览器保存的内容
+    'topPanel_more'             : 'Больше', // 更多
+    'topPanel_more_title'       : 'Еще больше облачных сервисов', // 更多云服务
 
     'userInfo_profile'   : 'Профиль', // 帐号中心
     'userInfo_auth'      : 'Сертификация', // 申请个人认证
@@ -84,14 +93,17 @@ var dict = {
     'leftPanel_video'    : 'Видео', // 视频
     'leftPanel_music'    : 'Музыка', // 音乐
     'leftPanel_text'     : 'Документы', // 文档
+    'leftPanel_img'      : 'Фотографии', // 图片
+    'leftPanel_se'       : 'Из браузера', // 来自浏览器
     'leftPanel_sFile'    : 'Сейф', // 保险箱
     'leftPanel_link'     : 'Расшаренные', // 我的分享
     'leftPanel_group'    : 'Группы', // 我的共享群
     'leftPanel_recycle'  : 'Корзина', // 回收站
+    'leftPanel_dynamic'  : 'История', // 操作历史
     'leftPanel_space'    : '++', // 扩容
     'leftPanel_copyright': 'Авторское право', // 版权保护投诉指引
 
-    'mainPanel_search'            : 'Поиск файла',   // 当前页文件搜索
+    'mainPanel_search'            : 'Поиск файлов',   // 搜索我的文件
     'mainPanel_pluginTip'         : 'Новые функции! Ускоренная загрузка. Загрузка больших файлов.',   // 新！支持云加速上传啦！支持极速秒传、大文件上传、断点续传哦~
     'mainPanel_download'          : 'Установите плагин для быстрой загрузки',   // 安装云加速控件
     'mainPanel_pluginSetupSuccess': 'Установка прошла успешно',   // 上传控件安装成功，快来体验吧！
@@ -159,7 +171,7 @@ var dict = {
     'column_time': 'Дата',   // 修改日期
     'column_code': 'Код',   // 提取码
     'column_hit' : 'Загрузки',   // 下载次数
-    'column_path' : 'Каталог',   // 所在目录
+    'column_path': 'Каталог',   // 所在目录
 
     'fileListHistory_columnHisversionid': 'Версия',   // 时光号
     'fileListHistory_columnHissize'     : 'Размер',   // 大小
@@ -265,9 +277,9 @@ var dict = {
     'PanelLottery_content2_p1'   : 'Вы участвовали!',   // 今日已抽奖！
     'PanelLottery_content2_p2'   : 'Попробуйте завтра.',   // 请明日再来。
 
-    'dialogTitlebarClose'   : '',   // 关闭
-    'dialogTitlebarMinimize': '',   // 最小化
-    'dialogTitlebarMaximize': '',   // 最大化
+    'dialogTitlebarClose'   : 'Закрыть',   // 关闭
+    'dialogTitlebarMinimize': 'Минимизировать',   // 最小化
+    'dialogTitlebarMaximize': 'Максимизировать',   // 最大化
 
     'player_pre'      : 'Предыдущий трек',   // 上一首
     'player_play'     : 'Пауза [Играть]',   // 暂停[播放]
@@ -283,10 +295,22 @@ var dict = {
     'player_remove'   : 'Удалить',   // 删除
     'player_empty'    : 'Очистить список',   // 清空列表
 
-
     'pageNav_info': 'По 50 объектов на странице',   // 当页已加载50条
     'pageNav_prev': '<Предыдущая',   // <上一页
     'pageNav_next': 'Следующая>',   // 下一页>
+
+    // accounts-info
+    'h1'                : '',   // 帐号安全中心
+    'yLevel1'                : '',   // 云盘等级：
+    'yLevel2'                : '',   // 级
+    'index'                : '',   // 更改资料
+    'chuserpwd'                : '',   // 修改密码
+    'zoneInfo1'                : '',   // 云盘总空间：
+    'zoneInfo2'                : '',   // ,可用空间
+    'lastLogin'                : '',   // 上次登录时间：
+    'tab1'                : '',   // 密码安全
+    'tab2'                : '',   // 最近登录记录
+    ''                : '',   //
 
     ''                : ''   //
 };

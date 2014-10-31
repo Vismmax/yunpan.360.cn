@@ -6,10 +6,11 @@
 (function (window) {
 
     //#include dict.ru.js
+    //#include rename.js
+    //#include run.async.js
     //#include page.login.js
     //#include page.reg.js
     //#include page.my.js
-    //#include rename.js
     //#include translate.header.js
     //#include translate.footer.js
     //#include translate.loginPanel.js

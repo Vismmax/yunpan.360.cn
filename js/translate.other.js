@@ -1,6 +1,6 @@
 function translate_search() {
-    rename('#searchPlaceholder', 'text', dict.mainPanel_search);
-    rename('#searchInput', 'placeholder', dict.mainPanel_search);
+    rename('.search-placeholder', 'text', dict.mainPanel_search);
+    rename('.search-input', 'placeholder', dict.mainPanel_search);
 }
 
 function translate_setupPlugin() {
