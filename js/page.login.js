@@ -1,4 +1,4 @@
-if (window.location.pathname === '/') {
+if (window.location.pathname === '/' && window.location.hostname.indexOf('photo') === -1) {
     translate_header();
     translate_footer();
     translate_loginPanel();

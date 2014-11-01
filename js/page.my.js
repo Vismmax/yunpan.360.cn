@@ -28,6 +28,7 @@ if (window.location.pathname.indexOf('/my') === 0) {
         runAsync(translate_x_yp_4);
         runAsync(translate_pageNav);
         runAsync(translate_search);
+        runAsync(translate_dynamic);
         
         mutations.forEach(function (mutation) {
 

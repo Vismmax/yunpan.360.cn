@@ -103,6 +103,9 @@ var dict = {
     'leftPanel_space'    : '++', // 扩容
     'leftPanel_copyright': 'Авторское право', // 版权保护投诉指引
 
+    'leftPanel_allPhoto'    : 'Все фотографии', // 所有照片
+    'leftPanel_privateAlbum': 'Личный альбом', // 个人相册
+
     'mainPanel_search'            : 'Поиск файлов',   // 搜索我的文件
     'mainPanel_pluginTip'         : 'Новые функции! Ускоренная загрузка. Загрузка больших файлов.',   // 新！支持云加速上传啦！支持极速秒传、大文件上传、断点续传哦~
     'mainPanel_download'          : 'Установите плагин для быстрой загрузки',   // 安装云加速控件
@@ -162,6 +165,34 @@ var dict = {
     'toolbar_delDate'         : 'Дата',   // 删除日期
     'toolbar_shareDate'       : 'Дата',   // 日期
 
+    'toolbarPhoto_title':'Все фотографии',   // 所有照片
+    'toolbarPhoto_tbUploadBtn':'Загрузить фото',   // 上传照片
+    'toolbarPhoto_tbBtnAdd':'Добавить фото',   // 添加照片
+    'toolbarPhoto_tbBtnCreatealbumPrivate':'Создать личный альбом',   // 创建个人相册
+    'toolbarPhoto_tbBtnCreatealbumShare':'Создать общий альбом',   // 创建共享相册
+    'toolbarPhoto_tbBtnTimeline':'По месяцам группировка',   // 按月分组
+    'toolbarPhoto_tbBtnBatch':'Управление альбомами',   // 批量管理
+    'toolbarPhoto_tbBtnMore':'Больше',   // 更多
+    'toolbarPhoto_tbBtnDl':'Загрузить',   // 下载
+    'toolbarPhoto_tbBtnDel':'Удалить',   // 删除
+    'toolbarPhoto_tbBtnDelFromAlbum':'Удалить',   // 删除
+    'toolbarPhoto_tbBtnMove':'Добавить в альбом',   // 添加到相册
+    'toolbarPhoto_tbBtnDone':'Завершить',   // 完成
+
+    //'toolbarPhoto_':'Последние',   // 最近上传
+    //'toolbarPhoto_':'По годам',   // 按年分组
+    //'toolbarPhoto_':'По месяцам',   // 按月分组
+    //'toolbarPhoto_':'По дням',   // 按天分组
+
+    //'toolbarPhoto_':'Загрузить фото',   // 从本地上传 Загрузить с локального
+    //'toolbarPhoto_':'Добавить фото',   // 添加已有照片 Добавить существующие фотографии
+    //'toolbarPhoto_':'',   //
+    //'toolbarPhoto_':'',   //
+    //'toolbarPhoto_':'',   //
+    //'toolbarPhoto_':'',   //
+    //'toolbarPhoto_':'',   //
+    //'toolbarPhoto_':'',   //
+
     'crumb_back'         : 'Назад',   // 返回上一级
     'crumb_firstItem'    : 'Все файлы',   // 全部文件
     'crumb_recyclePrompt': '(Совет: файлы в корзине не занимают места, и сохраняются в течение 90 дней, после чего будут автоматически удалены.)',   // （温馨提示：回收站文件不占用您云盘空间，保留90天后将自动删除。）
@@ -177,6 +208,24 @@ var dict = {
     'fileListHistory_columnHissize'     : 'Размер',   // 大小
     'fileListHistory_columnHistime'     : 'Дата изменения',   // 修改日期
 
+    'dynamic_tabAll'    : 'Все',   // 所有操作
+    'dynamic_tabFile'   : 'Файлы',   // 文件操作
+    'dynamic_tabShare'  : 'Обмен',   // 分享操作
+    'dynamic_btnBlue'   : 'Обновить',   // 刷新
+    'dynamic_btnGray'   : 'Очистка истории',   // 清空操作历史
+    'dynamic_objDict'   : {
+        '你删除了': 'Удалено',   // 你删除了
+        '你添加了': 'Добавлено',   // 你添加了
+        '你添加'  : 'Добавлено',   // 你添加
+        '你将'    : ' ',   // 你将
+        '等'     : 'и ',   // 等
+        '个文件'  : ' файлов ',   // 个文件
+        '到'     : ' в',   // 到
+        '中的'   : 'из',   // 中的
+        '重命名为': 'переименовано в'   // 重命名为
+    },
+    'dynamic_loadingTip': 'Загрузка истории операций...',   // 正在加载操作历史...
+    'dynamic_limitTip'  : 'Последние 1000 записей',   // 显示最近1000条记录
     'loadingMask': 'Загрузка списка файлов...',   // 加载文件列表中...
     'dropOverlay': 'Перетащите файлы для загрузки',   // 将文件拖放至此可以上传
 

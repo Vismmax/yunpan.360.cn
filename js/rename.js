@@ -28,7 +28,7 @@ function rename(sel, attr, text, nn) {
         }
     };
 
-    if (typeof(sel) == "string") {
+    if (typeof(sel) == 'string') {
         var noda;
         if (noda = document.querySelectorAll(sel)) {
             for (var i = 0; i < noda.length; i++) {
@@ -37,8 +37,8 @@ function rename(sel, attr, text, nn) {
         }
     }
 
-    if (typeof(sel) == "object") {
-        console.log(sel);
+    if (typeof(sel) == 'object') {
         rn(sel);
     }
 }
+

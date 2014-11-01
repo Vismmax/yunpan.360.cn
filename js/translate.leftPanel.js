@@ -1,4 +1,5 @@
 function translate_leftPanel() {
+
     rename('#leftPanel .tab-file .text', 'text', dict.leftPanel_file);
     rename('#leftPanel .tab-video .text', 'text', dict.leftPanel_video);
     rename('#leftPanel .tab-music .text', 'text', dict.leftPanel_music);
@@ -12,5 +13,6 @@ function translate_leftPanel() {
     rename('#leftPanel .tab-dynamic .text', 'text', dict.leftPanel_dynamic);
     rename('#leftPanel .update-space', 'text', dict.leftPanel_space);
     rename('#leftPanel .copyright-protect a', 'text', dict.leftPanel_copyright);
+
 }
 
