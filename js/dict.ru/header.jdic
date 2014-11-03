@@ -1,0 +1,8 @@
+	'nav_logo'        : 'Cloud Drive',   // 360云盘
+	'nav_36'          : 'Получить 36T',   // 36T免费空间
+	'nav_home'        : 'Домой',   // 首页
+	'nav_group'       : 'Группы',   // 共享群
+	'nav_download'    : 'Скачать',   // 下载
+	'nav_download_new': ' (Новая версия)',   //（有新版）
+	'nav_forum'       : 'Форум',   // 论坛
+

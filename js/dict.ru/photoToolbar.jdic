@@ -1,0 +1,38 @@
+	'toolbarPhoto_title':'Все фотографии',   // 所有照片
+	'toolbarPhoto_tbUploadBtn':'Загрузить фото',   // 上传照片
+	'toolbarPhoto_tbBtnAdd':'Добавить фото',   // 添加照片
+	'toolbarPhoto_tbBtnCreatealbumPrivate':'Создать личный альбом',   // 创建个人相册
+	'toolbarPhoto_tbBtnCreatealbumShare':'Создать общий альбом',   // 创建共享相册
+	'toolbarPhoto_tbBtnTimeline':'По месяцам',   // 按月分组
+	'toolbarPhoto_tbBtnBatch':'Управление альбомами',   // 批量管理
+	'toolbarPhoto_tbBtnMore':'Больше',   // 更多
+	'toolbarPhoto_tbBtnDl':'Загрузить',   // 下载
+	'toolbarPhoto_tbBtnDel':'Удалить',   // 删除
+	'toolbarPhoto_tbBtnDelFromAlbum':'Удалить',   // 删除
+	'toolbarPhoto_tbBtnMove':'Добавить в альбом',   // 添加到相册
+	'toolbarPhoto_tbBtnDone':'Завершить',   // 完成
+
+	'toolbarPhoto_timeline0':'Последние',   // 最近上传
+    'toolbarPhoto_timeline1':'По годам',   // 按年分组
+    'toolbarPhoto_timeline2':'По месяцам',   // 按月分组
+    'toolbarPhoto_timeline3':'По дням',   // 按天分组
+
+    'toolbarPhoto_newAlbum' : 'Новый фотоальбом',   // 新建个人相册
+    'toolbarPhoto_newAlbumName' : 'Новый альбом',   // 新建相册
+
+    'toolbarPhoto_add0':'Загрузить фото',   // 从本地上传 Загрузить с локального
+    'toolbarPhoto_add1':'Добавить фото',   // 添加已有照片 Добавить существующие фотографии
+
+    'toolbarPhoto_more0':'Управление альбомами',   // 批量管理
+    'toolbarPhoto_more1':'Удалить альбом',   // 删除此相册
+
+    'toolbarPhoto_date':{
+        '年': '-',
+        '月': '-',
+        '日': '-'
+    },
+    'toolbarPhoto_count':' фото',   // 张
+    'toolbarPhoto_chkall':'Выбрать все',   // 全选
+
+    'toolbarPhoto_load' : 'Загрузка фото ...',   // 正在努力加载图片...
+

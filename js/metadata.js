@@ -8,6 +8,6 @@
 // @updateURL   https://github.com/Vismmax/yunpan.360.cn/raw/master/yunpan.360.cn.ru.meta.js
 // @downloadURL https://github.com/Vismmax/yunpan.360.cn/raw/master/yunpan.360.cn.ru.user.js
 // @include     *yunpan.360.cn/*
-// @version     0.4
+// @version     0.5
 // @grant       none
 // ==/UserScript==

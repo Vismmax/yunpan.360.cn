@@ -1,0 +1,4 @@
+	'dialogTitlebarClose'   : 'Закрыть',   // 关闭
+	'dialogTitlebarMinimize': 'Минимизировать',   // 最小化
+	'dialogTitlebarMaximize': 'Максимизировать',   // 最大化
+

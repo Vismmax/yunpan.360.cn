@@ -1,0 +1,7 @@
+	'footer_agreement'  : 'Соглашение',   // 使用协议
+	'footer_privacy'    : 'Конфиденциальность',   // 隐私保护
+	'footer_releasenote': 'Журнал',   // 更新日志
+	'footer_help'       : 'Помощь',   // 帮助中心
+	'footer_forum'      : 'Форум',   // 问题反馈
+	'footer_mailto'     : 'Сообщить о незаконном содержании: ',   // 违法内容举报：
+

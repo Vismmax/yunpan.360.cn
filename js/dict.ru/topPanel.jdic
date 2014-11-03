@@ -1,0 +1,14 @@
+	'topPanel_logo'             : 'Домашняя страница',   // 云盘首页
+	'topPanel_file'             : 'Файлы', // 网盘
+	'topPanel_file_title'       : 'Наиболее безопасный сетевой диск', // 最安全的网络U盘
+	'topPanel_xiangce'          : 'Фотоальбом', // 相册
+	'topPanel_xiangce_title'    : 'Фотоальбом', // 相册
+	'topPanel_my_photo'         : 'Фотоальбом', // 云相册
+	'topPanel_my_photo_title'   : 'Фотоальбом', // 云相册
+	'topPanel_share_photo'      : 'Обмен фото', // 共享相册
+	'topPanel_share_photo_title': 'Обмен фото', // 共享相册
+	'topPanel_collect'          : 'Коллекция', // 云收藏
+	'topPanel_collect_title'    : 'Сохраненные данные из браузера', // 从浏览器保存的内容
+	'topPanel_more'             : 'Больше', // 更多
+	'topPanel_more_title'       : 'Еще больше облачных сервисов', // 更多云服务
+

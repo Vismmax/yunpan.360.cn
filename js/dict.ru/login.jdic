@@ -1,0 +1,31 @@
+	'login_title'          : 'Добро пожаловать!',   // 欢迎使用360云盘！
+	'login_account'        : '№ тел. / имя / email',   // 手机号/用户名/邮箱
+	'login_account_label'  : 'Логин',   // 帐号
+	'login_password'       : 'Пароль',   // 请输入您的密码
+	'login_password_label' : 'Пароль',   // 密码
+	'login_error'          : 'Пожалуйста, введите буквы или цифры, без учета регистра',   // 请输入图中的字母或数字，不区分大小写
+	'login_use'            : 'В настоящее время вы используете облако c учетной записи',   // 您当前正在使用的云盘帐号是：
+	'login_phrase'         : 'Код:',   // 验证码
+	'login_phrase_label'   : 'Код:',   // 验证码
+	'login_lwm'            : 'Сменить рисунок',   // 点击更换图片
+	"login_refreshCaptcha" : 'Сменить',   // 换一张
+	'login_tipsPhraseLogin': 'Пожалуйста, введите буквы или цифры, без учета регистра',   // 请输入图中的字母或数字，不区分大小写
+	'login_regNewAccount'  : 'Регистрация',   // 注册新帐号
+	'login_keep'           : ' Запомнить',   //  下次自动登录
+	'login_findPwd'        : 'Забыли пароль?',   // 忘记密码？
+	'login_submit'         : 'Войти',   // 登录
+	'login_submit_go'      : 'Вход',   // 登录中
+	'login_reg'            : 'Регистрация',   // 注册360账号
+	'login_goMy'           : 'Войти в облоко',   // 进入我的云盘
+	'login_info_p'         : 'Вы вошли как:',   // 您当前正在使用的云盘帐号是：
+	'login_logout'         : 'Выход>>',   // 更换帐号&gt;&gt;
+	'login_dl_pc'          : 'PC с синхронизацией',   // PC同步版下载
+	'login_dl_apk'         : 'Android',   // 手机正式版下载 Для телефонов
+	'login_dl_mac'         : 'Mac с синхронизацией',   // Mac同步版下载
+	'login_qrcode'         : 'Сканировать для загрузки',   // 手机扫描 直接下载
+	'login_noCookie'       : 'Для входа необходимо включить cookie',   // 浏览器已禁止设置cookie，无法正常登录，请
+	'login_opencookie'     : ' Включить cookie ',   // 启用cookie
+	'login_loginErrorMsg'  : 'Введите правильные данные',   //
+	'login_clientBtn'      : 'PC версия',
+	'login_mobileBtn'      : 'Для телефона',
+

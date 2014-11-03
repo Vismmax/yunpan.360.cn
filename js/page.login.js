@@ -3,7 +3,7 @@ if (window.location.pathname === '/' && window.location.hostname.indexOf('photo'
     translate_footer();
     translate_loginPanel();
     translate_loginSubmit();
-    translate_downloadList();
+    translate_loginDownloadList();
     replace_slides();
 }
 

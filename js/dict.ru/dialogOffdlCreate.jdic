@@ -1,0 +1,6 @@
+	"PanelOffdlCreate_hd"         : 'Новая загрузка в автономном режиме',   // 新建离线下载任务
+	"PanelOffdlCreate_offdlTitle" : 'Пожалуйста, введите адрес ссылки, для скачивания файла:',   // 请输入要下载的文件链接地址：
+	"PanelOffdlCreate_placeholder": 'Поддержка HTTP, FTP ссылок',   // 支持HTTP、FTP链接下载
+	"PanelOffdlCreate_cancel"     : 'Отмена',   // 取消
+	"PanelOffdlCreate_start"      : 'Начать',   // 开始下载
+

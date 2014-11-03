@@ -1,0 +1,14 @@
+	"PanelOffdl_hd"            : 'Управление задачами',   // 任务管理
+	"PanelOffdl_offdlTitle1"   : 'Последние ',   // 最近
+	"PanelOffdl_offdlTitle2"   : ' оффлайн загрузок',   // 离线下载任务记录
+	"PanelOffdl_offdlBtnCreate": 'Создать',   // 新建普通下载
+	"PanelOffdl_columnName"    : 'Имя',   // 任务名
+	"PanelOffdl_columnSize"    : 'Размер',   // 大小
+	"PanelOffdl_columnStatus"  : 'Статус',   // 下载状态
+	"PanelOffdl_columnOp"      : 'Операция',   // 操作
+	"PanelOffdl_offdlSaveTip1" : 'Файлы сохраняется в ',   // 离线下载的文件统一保存到
+	"PanelOffdl_offdlSaveTip2" : ' папке',   // 文件夹里
+	"PanelOffdl_offdlSaveTip_s": '[специальной]',   // [来自-离线下载的文件]
+	"PanelOffdl_background"    : 'В фоне',   // 后台运行
+	"PanelOffdl_clean"         : 'Очистить',   // 清空历史记录
+

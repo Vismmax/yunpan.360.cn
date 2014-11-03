@@ -1,0 +1,54 @@
+	// btns-filelist
+	'toolbar_tbUpload'            : 'Загрузить',   // 上传
+	'toolbar_tbNew'               : 'Новая папка',   // 新建文件夹
+	'toolbar_tbOffline'           : 'Загрузить оффлайн',   // 离线下载
+	'toolbar_tbDl'                : 'Скачать',   // 下载
+	'toolbar_tbPackDl'            : 'Скачать',   // 下载
+	'toolbar_tbDel'               : 'Удалить',   // 删除
+	'toolbar_tbLink'              : 'Общий доступ',   // 分享 (Поделиться)
+	'toolbar_tbLinkBatch'         : 'Общий доступ',   // 分享 (Поделиться)
+	'toolbar_tbMore'              : 'Больше',   // 更多
+
+	// btns-sfilelist
+	'toolbar_tdMoveOut'           : 'Передача файлов в сейф',   // 转出文件保险箱
+	'toolbar_tbLockSfile'         : 'Сразу заблокировать сейф',   // 立即锁上保险箱
+
+	// btns-link
+	'toolbar_tbLinkView'          : 'Просмотреть общие ссылки',   // 查看分享链接
+	'toolbar_tbLinkDel'           : 'Отменить общий доступ',   // 取消分享
+	'toolbar_tbExtractOn'         : 'Возможность извлечения кода',   // 启用提取码
+	'toolbar_tbExtractOff'        : 'Отмена извлечения кода',   // 取消提取码
+	'toolbar_tbLinkCopy'          : 'Копирование общей ссылки',   // 复制分享链接
+	'toolbar_shareTopTip'         : 'В связи с борьбой с порнографией, функции общего доступа временно недоступны. ',   // 为配合有关部门的“扫黄打非”净网行动，云盘分享功能临时调整。
+	'toolbar_shareTopTip_a'       : 'Подробнее',   // 查看详情
+
+	// btns-recycle
+	'toolbar_tbRestore'           : 'Восстановить',   // 还原文件
+	'toolbar_tbDisdel'            : 'Удалить',   // 删除
+	'toolbar_tbClearall'          : 'Очистить корзину',   // 清空回收站
+	'toolbar_tbOpenPassword'      : 'Установить пароль',   // 对回收站启用云盘安全密码
+	'toolbar_tbOpenPasswordDone'  : 'Снять пароль',   // 回收站云盘安全密码启用中
+
+	// btns-hisfile
+	'toolbar_tbHisReFile_title'   : 'Восстановить до выбранной версии',   // 还原到选中版本
+	'toolbar_tbHisReFile'         : 'Восстановить',   // 穿越到选中时光号
+	'toolbar_tbHisView'           : 'Посмотреть онлайн',   // 在线查看
+	'toolbar_tbHisViewPic'        : 'Посмотреть онлайн',   // 在线查看
+	'toolbar_tbHisDl'             : 'Скачать',   // 下载
+
+	'toolbar_miniUpload_title': 'Загрузить файл',   // 上传文件
+
+	// display-mode
+	'toolbar_tbText_title'    : 'Просмотр в виде списка',   // 切换到列表视图
+	'toolbar_tbText'          : 'Список',   // 列表视图
+	'toolbar_tbPic_title'     : 'Просмотр в виде эскизов',   // 切换到大图视图
+	'toolbar_tbPic'           : 'Эскизы',   // 大图标视图
+
+	// sort
+	'toolbar_name'            : 'Имя',   // 文件名
+	'toolbar_fsize'           : 'Размер',   // 大小
+	'toolbar_newUpload'       : 'Последние',   // 最近上传 (Недавно загруженные)
+	'toolbar_fmtime'          : 'Дата',   // 修改日期
+	'toolbar_delDate'         : 'Дата',   // 删除日期
+	'toolbar_shareDate'       : 'Дата',   // 日期
+

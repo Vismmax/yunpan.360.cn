@@ -8,7 +8,7 @@
 // @updateURL   https://github.com/Vismmax/yunpan.360.cn/raw/master/yunpan.360.cn.ru.meta.js
 // @downloadURL https://github.com/Vismmax/yunpan.360.cn/raw/master/yunpan.360.cn.ru.user.js
 // @include     *yunpan.360.cn/*
-// @version     0.4
+// @version     0.5
 // @grant       none
 // ==/UserScript==
 
@@ -19,456 +19,386 @@
 
 var dict = {
 
-    'title'           : '360 Cloud Drive - бесплатное, неограниченное, безопасное пространство',   // 360云盘 - 安全免费 无限空间
-    'logo'            : 'Cloud Drive',   // 360云盘
-    'nav_36'          : 'Получить 36T',   // 36T免费空间
-    'nav_home'        : 'Домой',   // 首页
-    'nav_group'       : 'Группы',   // 共享群
-    'nav_download'    : 'Скачать',   // 下载
-    'nav_download_new': ' (Новая версия)',   //（有新版）
-    'nav_forum'       : 'Форум',   // 论坛
+	'title'           : '360 Cloud Drive - бесплатное, неограниченное, безопасное пространство',   // 360云盘 - 安全免费 无限空间
+	'my_title'                  : '360 Cloud Drive - Мой диск',   // 360云盘 - 我的云盘
 
-    'footer_agreement'  : 'Соглашение',   // 使用协议
-    'footer_privacy'    : 'Конфиденциальность',   // 隐私保护
-    'footer_releasenote': 'Журнал',   // 更新日志
-    'footer_help'       : 'Помощь',   // 帮助中心
-    'footer_forum'      : 'Форум',   // 问题反馈
-    'footer_mailto'     : 'Сообщить о незаконном содержании: ',   // 违法内容举报：
+	'nav_logo'        : 'Cloud Drive',   // 360云盘
+	'nav_36'          : 'Получить 36T',   // 36T免费空间
+	'nav_home'        : 'Домой',   // 首页
+	'nav_group'       : 'Группы',   // 共享群
+	'nav_download'    : 'Скачать',   // 下载
+	'nav_download_new': ' (Новая версия)',   //（有新版）
+	'nav_forum'       : 'Форум',   // 论坛
 
-    'login_title'          : 'Добро пожаловать!',   // 欢迎使用360云盘！
-    'login_account'        : '№ тел. / имя / email',   // 手机号/用户名/邮箱
-    'login_account_label'  : 'Логин',   // 帐号
-    'login_password'       : 'Пароль',   // 请输入您的密码
-    'login_password_label' : 'Пароль',   // 密码
-    'login_error'          : 'Пожалуйста, введите буквы или цифры, без учета регистра',   // 请输入图中的字母或数字，不区分大小写
-    'login_use'            : 'В настоящее время вы используете облако c учетной записи',   // 您当前正在使用的云盘帐号是：
-    'login_phrase'         : 'Код:',   // 验证码
-    'login_phrase_label'   : 'Код:',   // 验证码
-    'login_lwm'            : 'Сменить рисунок',   // 点击更换图片
-    "login_refreshCaptcha" : 'Сменить',   // 换一张
-    'login_tipsPhraseLogin': 'Пожалуйста, введите буквы или цифры, без учета регистра',   // 请输入图中的字母或数字，不区分大小写
-    'login_regNewAccount'  : 'Регистрация',   // 注册新帐号
-    'login_keep'           : ' Запомнить',   //  下次自动登录
-    'login_findPwd'        : 'Забыли пароль?',   // 忘记密码？
-    'login_submit'         : 'Войти',   // 登录
-    'login_submit_go'      : 'Вход',   // 登录中
-    'login_reg'            : 'Регистрация',   // 注册360账号
-    'login_goMy'           : 'Войти в облоко',   // 进入我的云盘
-    'login_info_p'         : 'Вы вошли как:',   // 您当前正在使用的云盘帐号是：
-    'login_logout'         : 'Выход>>',   // 更换帐号&gt;&gt;
-    'login_dl_pc'          : 'PC с синхронизацией',   // PC同步版下载
-    'login_dl_apk'         : 'Android',   // 手机正式版下载 Для телефонов
-    'login_dl_mac'         : 'Mac с синхронизацией',   // Mac同步版下载
-    'login_qrcode'         : 'Сканировать для загрузки',   // 手机扫描 直接下载
-    'login_noCookie'       : 'Для входа необходимо включить cookie',   // 浏览器已禁止设置cookie，无法正常登录，请
-    'login_opencookie'     : ' Включить cookie ',   // 启用cookie
-    'login_loginErrorMsg'  : 'Введите правильные данные',   //
-    'login_clientBtn'      : 'PC версия',
-    'login_mobileBtn'      : 'Для мобильного',
+	'footer_agreement'  : 'Соглашение',   // 使用协议
+	'footer_privacy'    : 'Конфиденциальность',   // 隐私保护
+	'footer_releasenote': 'Журнал',   // 更新日志
+	'footer_help'       : 'Помощь',   // 帮助中心
+	'footer_forum'      : 'Форум',   // 问题反馈
+	'footer_mailto'     : 'Сообщить о незаконном содержании: ',   // 违法内容举报：
 
-    'reg_title'          : 'Добро пожаловать в Облако 360',   // 欢迎注册360云盘
-    'reg_email'          : 'Почтовый ящик',   // 邮箱
-    'reg_tips_loginEmail': 'Пожалуйста, введите свой почтовый ящик, ',   // 请输入您的常用邮箱，
-    'reg_fac_email'      : 'Нет почты?',   // 没有邮箱？
-    'reg_password'       : 'Пароль',   // 密码
-    'reg_tips_password'  : '6-20 символов (с учетом регистра)',   // 6-20个字符，（区分大小写）
-    'reg_repassword'     : 'Подтвердите пароль',   // 确认密码
-    'reg_tips_repassword': 'Пожалуйста, введите пароль еще раз',   // 请再次输入密码
-    'reg_phrase'         : 'Код подтверждения',   // 验证码
-    'reg_refreshCaptcha' : 'Обновить',   // 换一张
-    'reg_tips_phrase'    : 'Пожалуйста, введите буквы или цифры, без учета регистра',   // 请输入图中的字母或数字，不区分大小写
-    'reg_agree'          : ' Я прочитал и согласен',   // 我已经阅读并同意
-    'reg_fac_agree'      : '《360 Условия предоставления услуг》',   // 《360用户服务条款》
-    'reg_submit'         : 'Зарегистрироваться',   // 立即注册
+	'login_title'          : 'Добро пожаловать!',   // 欢迎使用360云盘！
+	'login_account'        : '№ тел. / имя / email',   // 手机号/用户名/邮箱
+	'login_account_label'  : 'Логин',   // 帐号
+	'login_password'       : 'Пароль',   // 请输入您的密码
+	'login_password_label' : 'Пароль',   // 密码
+	'login_error'          : 'Пожалуйста, введите буквы или цифры, без учета регистра',   // 请输入图中的字母或数字，不区分大小写
+	'login_use'            : 'В настоящее время вы используете облако c учетной записи',   // 您当前正在使用的云盘帐号是：
+	'login_phrase'         : 'Код:',   // 验证码
+	'login_phrase_label'   : 'Код:',   // 验证码
+	'login_lwm'            : 'Сменить рисунок',   // 点击更换图片
+	"login_refreshCaptcha" : 'Сменить',   // 换一张
+	'login_tipsPhraseLogin': 'Пожалуйста, введите буквы или цифры, без учета регистра',   // 请输入图中的字母或数字，不区分大小写
+	'login_regNewAccount'  : 'Регистрация',   // 注册新帐号
+	'login_keep'           : ' Запомнить',   //  下次自动登录
+	'login_findPwd'        : 'Забыли пароль?',   // 忘记密码？
+	'login_submit'         : 'Войти',   // 登录
+	'login_submit_go'      : 'Вход',   // 登录中
+	'login_reg'            : 'Регистрация',   // 注册360账号
+	'login_goMy'           : 'Войти в облоко',   // 进入我的云盘
+	'login_info_p'         : 'Вы вошли как:',   // 您当前正在使用的云盘帐号是：
+	'login_logout'         : 'Выход>>',   // 更换帐号&gt;&gt;
+	'login_dl_pc'          : 'PC с синхронизацией',   // PC同步版下载
+	'login_dl_apk'         : 'Android',   // 手机正式版下载 Для телефонов
+	'login_dl_mac'         : 'Mac с синхронизацией',   // Mac同步版下载
+	'login_qrcode'         : 'Сканировать для загрузки',   // 手机扫描 直接下载
+	'login_noCookie'       : 'Для входа необходимо включить cookie',   // 浏览器已禁止设置cookie，无法正常登录，请
+	'login_opencookie'     : ' Включить cookie ',   // 启用cookie
+	'login_loginErrorMsg'  : 'Введите правильные данные',   //
+	'login_clientBtn'      : 'PC версия',
+	'login_mobileBtn'      : 'Для телефона',
 
-    'my_title'                  : '360 Cloud Drive - Мой диск',   // 360云盘 - 我的云盘
-    'topPanel_logo'             : 'Домашняя страница',   // 云盘首页
-    'topPanel_file'             : 'Файлы', // 网盘
-    'topPanel_file_title'       : 'Наиболее безопасный сетевой диск', // 最安全的网络U盘
-    'topPanel_xiangce'          : 'Фотоальбом', // 相册
-    'topPanel_xiangce_title'    : 'Фотоальбом', // 相册
-    'topPanel_my_photo'         : 'Фотоальбом', // 云相册
-    'topPanel_my_photo_title'   : 'Фотоальбом', // 云相册
-    'topPanel_share_photo'      : 'Обмен фото', // 共享相册
-    'topPanel_share_photo_title': 'Обмен фото', // 共享相册
-    'topPanel_collect'          : 'Коллекция', // 云收藏
-    'topPanel_collect_title'    : 'Сохраненные данные из браузера', // 从浏览器保存的内容
-    'topPanel_more'             : 'Больше', // 更多
-    'topPanel_more_title'       : 'Еще больше облачных сервисов', // 更多云服务
+	'reg_title'          : 'Добро пожаловать в Облако 360',   // 欢迎注册360云盘
+	'reg_email'          : 'Почтовый ящик',   // 邮箱
+	'reg_tips_loginEmail': 'Пожалуйста, введите свой почтовый ящик, ',   // 请输入您的常用邮箱，
+	'reg_fac_email'      : 'Нет почты?',   // 没有邮箱？
+	'reg_password'       : 'Пароль',   // 密码
+	'reg_tips_password'  : '6-20 символов (с учетом регистра)',   // 6-20个字符，（区分大小写）
+	'reg_repassword'     : 'Подтвердите пароль',   // 确认密码
+	'reg_tips_repassword': 'Пожалуйста, введите пароль еще раз',   // 请再次输入密码
+	'reg_phrase'         : 'Код подтверждения',   // 验证码
+	'reg_refreshCaptcha' : 'Обновить',   // 换一张
+	'reg_tips_phrase'    : 'Пожалуйста, введите буквы или цифры, без учета регистра',   // 请输入图中的字母或数字，不区分大小写
+	'reg_agree'          : ' Я прочитал и согласен',   // 我已经阅读并同意
+	'reg_fac_agree'      : '《360 Условия предоставления услуг》',   // 《360用户服务条款》
+	'reg_submit'         : 'Зарегистрироваться',   // 立即注册
 
-    'userInfo_profile'   : 'Профиль', // 帐号中心
-    'userInfo_auth'      : 'Сертификация', // 申请个人认证
-    'userInfo_message'   : 'Сообщения', // 云盘消息
-    'userInfo_ypLevel'   : 'Уровень', // 云盘等级
-    'userInfo_volRecords': 'Записи', // 扩容记录
-    'userInfo_recharge'  : 'Обновление', // 空间升级卡
-    'userInfo_inviteFri' : 'Пригласить друга', // 邀请好友
-    'userInfo_tpFeedback': 'Форум', // 意见反馈
-    'userInfo_tpHelp'    : 'Помощь', // 帮助中心
-    'userInfo_lottery'   : 'Лотерея', // 每日抽奖
-    'userInfo_tpExit'    : 'Выход', // 退出云盘
+	'topPanel_logo'             : 'Домашняя страница',   // 云盘首页
+	'topPanel_file'             : 'Файлы', // 网盘
+	'topPanel_file_title'       : 'Наиболее безопасный сетевой диск', // 最安全的网络U盘
+	'topPanel_xiangce'          : 'Фотоальбом', // 相册
+	'topPanel_xiangce_title'    : 'Фотоальбом', // 相册
+	'topPanel_my_photo'         : 'Фотоальбом', // 云相册
+	'topPanel_my_photo_title'   : 'Фотоальбом', // 云相册
+	'topPanel_share_photo'      : 'Обмен фото', // 共享相册
+	'topPanel_share_photo_title': 'Обмен фото', // 共享相册
+	'topPanel_collect'          : 'Коллекция', // 云收藏
+	'topPanel_collect_title'    : 'Сохраненные данные из браузера', // 从浏览器保存的内容
+	'topPanel_more'             : 'Больше', // 更多
+	'topPanel_more_title'       : 'Еще больше облачных сервисов', // 更多云服务
 
-    'leftPanel_file'     : 'Все файлы', // 全部文件
-    'leftPanel_video'    : 'Видео', // 视频
-    'leftPanel_music'    : 'Музыка', // 音乐
-    'leftPanel_text'     : 'Документы', // 文档
-    'leftPanel_img'      : 'Фотографии', // 图片
-    'leftPanel_se'       : 'Из браузера', // 来自浏览器
-    'leftPanel_sFile'    : 'Сейф', // 保险箱
-    'leftPanel_link'     : 'Расшаренные', // 我的分享
-    'leftPanel_group'    : 'Группы', // 我的共享群
-    'leftPanel_recycle'  : 'Корзина', // 回收站
-    'leftPanel_dynamic'  : 'История', // 操作历史
-    'leftPanel_space'    : '++', // 扩容
-    'leftPanel_copyright': 'Авторское право', // 版权保护投诉指引
+	'userInfo_profile'   : 'Профиль', // 帐号中心
+	'userInfo_auth'      : 'Сертификация', // 申请个人认证
+	'userInfo_message'   : 'Сообщения', // 云盘消息
+	'userInfo_ypLevel'   : 'Уровень', // 云盘等级
+	'userInfo_volRecords': 'Записи', // 扩容记录
+	'userInfo_recharge'  : 'Обновление', // 空间升级卡
+	'userInfo_inviteFri' : 'Пригласить друга', // 邀请好友
+	'userInfo_tpFeedback': 'Форум', // 意见反馈
+	'userInfo_tpHelp'    : 'Помощь', // 帮助中心
+	'userInfo_lottery'   : 'Лотерея', // 每日抽奖
+	'userInfo_tpExit'    : 'Выход', // 退出云盘
 
-    'leftPanel_allPhoto'    : 'Все фотографии', // 所有照片
-    'leftPanel_privateAlbum': 'Личный альбом', // 个人相册
+	'leftPanel_file'     : 'Все файлы', // 全部文件
+	'leftPanel_video'    : 'Видео', // 视频
+	'leftPanel_music'    : 'Музыка', // 音乐
+	'leftPanel_text'     : 'Документы', // 文档
+	'leftPanel_img'      : 'Фотографии', // 图片
+	'leftPanel_se'       : 'Из браузера', // 来自浏览器
+	'leftPanel_sFile'    : 'Сейф', // 保险箱
+	'leftPanel_link'     : 'Расшаренные', // 我的分享
+	'leftPanel_group'    : 'Группы', // 我的共享群
+	'leftPanel_recycle'  : 'Корзина', // 回收站
+	'leftPanel_dynamic'  : 'История', // 操作历史
+	'leftPanel_space'    : '++', // 扩容
+	'leftPanel_copyright': 'Авторское право', // 版权保护投诉指引
 
-    'mainPanel_search'            : 'Поиск файлов',   // 搜索我的文件
-    'mainPanel_pluginTip'         : 'Новые функции! Ускоренная загрузка. Загрузка больших файлов.',   // 新！支持云加速上传啦！支持极速秒传、大文件上传、断点续传哦~
-    'mainPanel_download'          : 'Установите плагин для быстрой загрузки',   // 安装云加速控件
-    'mainPanel_pluginSetupSuccess': 'Установка прошла успешно',   // 上传控件安装成功，快来体验吧！
+	'mainPanel_search'            : 'Поиск файлов',   // 搜索我的文件
+	'mainPanel_pluginTip'         : 'Новые функции! Ускоренная загрузка. Загрузка больших файлов.',   // 新！支持云加速上传啦！支持极速秒传、大文件上传、断点续传哦~
+	'mainPanel_download'          : 'Установите плагин для быстрой загрузки',   // 安装云加速控件
+	'mainPanel_pluginSetupSuccess': 'Установка прошла успешно',   // 上传控件安装成功，快来体验吧！
 
-    // btns-filelist
-    'toolbar_tbUpload'            : 'Загрузить',   // 上传
-    'toolbar_tbNew'               : 'Новая папка',   // 新建文件夹
-    'toolbar_tbOffline'           : 'Загрузить оффлайн',   // 离线下载
-    'toolbar_tbDl'                : 'Скачать',   // 下载
-    'toolbar_tbPackDl'            : 'Скачать',   // 下载
-    'toolbar_tbDel'               : 'Удалить',   // 删除
-    'toolbar_tbLink'              : 'Общий доступ',   // 分享 (Поделиться)
-    'toolbar_tbLinkBatch'         : 'Общий доступ',   // 分享 (Поделиться)
-    'toolbar_tbMore'              : 'Больше',   // 更多
+	// btns-filelist
+	'toolbar_tbUpload'            : 'Загрузить',   // 上传
+	'toolbar_tbNew'               : 'Новая папка',   // 新建文件夹
+	'toolbar_tbOffline'           : 'Загрузить оффлайн',   // 离线下载
+	'toolbar_tbDl'                : 'Скачать',   // 下载
+	'toolbar_tbPackDl'            : 'Скачать',   // 下载
+	'toolbar_tbDel'               : 'Удалить',   // 删除
+	'toolbar_tbLink'              : 'Общий доступ',   // 分享 (Поделиться)
+	'toolbar_tbLinkBatch'         : 'Общий доступ',   // 分享 (Поделиться)
+	'toolbar_tbMore'              : 'Больше',   // 更多
 
-    // btns-sfilelist
-    'toolbar_tdMoveOut'           : 'Передача файлов в сейф',   // 转出文件保险箱
-    'toolbar_tbLockSfile'         : 'Сразу заблокировать сейф',   // 立即锁上保险箱
+	// btns-sfilelist
+	'toolbar_tdMoveOut'           : 'Передача файлов в сейф',   // 转出文件保险箱
+	'toolbar_tbLockSfile'         : 'Сразу заблокировать сейф',   // 立即锁上保险箱
 
-    // btns-link
-    'toolbar_tbLinkView'          : 'Просмотреть общие ссылки',   // 查看分享链接
-    'toolbar_tbLinkDel'           : 'Отменить общий доступ',   // 取消分享
-    'toolbar_tbExtractOn'         : 'Возможность извлечения кода',   // 启用提取码
-    'toolbar_tbExtractOff'        : 'Отмена извлечения кода',   // 取消提取码
-    'toolbar_tbLinkCopy'          : 'Копирование общей ссылки',   // 复制分享链接
-    'toolbar_shareTopTip'         : 'В связи с борьбой с порнографией, функции общего доступа временно недоступны. ',   // 为配合有关部门的“扫黄打非”净网行动，云盘分享功能临时调整。
-    'toolbar_shareTopTip_a'       : 'Подробнее',   // 查看详情
+	// btns-link
+	'toolbar_tbLinkView'          : 'Просмотреть общие ссылки',   // 查看分享链接
+	'toolbar_tbLinkDel'           : 'Отменить общий доступ',   // 取消分享
+	'toolbar_tbExtractOn'         : 'Возможность извлечения кода',   // 启用提取码
+	'toolbar_tbExtractOff'        : 'Отмена извлечения кода',   // 取消提取码
+	'toolbar_tbLinkCopy'          : 'Копирование общей ссылки',   // 复制分享链接
+	'toolbar_shareTopTip'         : 'В связи с борьбой с порнографией, функции общего доступа временно недоступны. ',   // 为配合有关部门的“扫黄打非”净网行动，云盘分享功能临时调整。
+	'toolbar_shareTopTip_a'       : 'Подробнее',   // 查看详情
 
-    // btns-recycle
-    'toolbar_tbRestore'           : 'Восстановить',   // 还原文件
-    'toolbar_tbDisdel'            : 'Удалить',   // 删除
-    'toolbar_tbClearall'          : 'Очистить корзину',   // 清空回收站
-    'toolbar_tbOpenPassword'      : 'Установить пароль',   // 对回收站启用云盘安全密码
-    'toolbar_tbOpenPasswordDone'  : 'Снять пароль',   // 回收站云盘安全密码启用中
+	// btns-recycle
+	'toolbar_tbRestore'           : 'Восстановить',   // 还原文件
+	'toolbar_tbDisdel'            : 'Удалить',   // 删除
+	'toolbar_tbClearall'          : 'Очистить корзину',   // 清空回收站
+	'toolbar_tbOpenPassword'      : 'Установить пароль',   // 对回收站启用云盘安全密码
+	'toolbar_tbOpenPasswordDone'  : 'Снять пароль',   // 回收站云盘安全密码启用中
 
-    // btns-hisfile
-    'toolbar_tbHisReFile_title'   : 'Восстановить до выбранной версии',   // 还原到选中版本
-    'toolbar_tbHisReFile'         : 'Восстановить',   // 穿越到选中时光号
-    'toolbar_tbHisView'           : 'Посмотреть онлайн',   // 在线查看
-    'toolbar_tbHisViewPic'        : 'Посмотреть онлайн',   // 在线查看
-    'toolbar_tbHisDl'             : 'Скачать',   // 下载
+	// btns-hisfile
+	'toolbar_tbHisReFile_title'   : 'Восстановить до выбранной версии',   // 还原到选中版本
+	'toolbar_tbHisReFile'         : 'Восстановить',   // 穿越到选中时光号
+	'toolbar_tbHisView'           : 'Посмотреть онлайн',   // 在线查看
+	'toolbar_tbHisViewPic'        : 'Посмотреть онлайн',   // 在线查看
+	'toolbar_tbHisDl'             : 'Скачать',   // 下载
 
-    'toolbar_miniUpload_title': 'Загрузить файл',   // 上传文件
+	'toolbar_miniUpload_title': 'Загрузить файл',   // 上传文件
 
-    // display-mode
-    'toolbar_tbText_title'    : 'Просмотр в виде списка',   // 切换到列表视图
-    'toolbar_tbText'          : 'Список',   // 列表视图
-    'toolbar_tbPic_title'     : 'Просмотр в виде эскизов',   // 切换到大图视图
-    'toolbar_tbPic'           : 'Эскизы',   // 大图标视图
+	// display-mode
+	'toolbar_tbText_title'    : 'Просмотр в виде списка',   // 切换到列表视图
+	'toolbar_tbText'          : 'Список',   // 列表视图
+	'toolbar_tbPic_title'     : 'Просмотр в виде эскизов',   // 切换到大图视图
+	'toolbar_tbPic'           : 'Эскизы',   // 大图标视图
 
-    // sort
-    'toolbar_name'            : 'Имя',   // 文件名
-    'toolbar_fsize'           : 'Размер',   // 大小
-    'toolbar_newUpload'       : 'Последние',   // 最近上传 (Недавно загруженные)
-    'toolbar_fmtime'          : 'Дата',   // 修改日期
-    'toolbar_delDate'         : 'Дата',   // 删除日期
-    'toolbar_shareDate'       : 'Дата',   // 日期
+	// sort
+	'toolbar_name'            : 'Имя',   // 文件名
+	'toolbar_fsize'           : 'Размер',   // 大小
+	'toolbar_newUpload'       : 'Последние',   // 最近上传 (Недавно загруженные)
+	'toolbar_fmtime'          : 'Дата',   // 修改日期
+	'toolbar_delDate'         : 'Дата',   // 删除日期
+	'toolbar_shareDate'       : 'Дата',   // 日期
 
-    'toolbarPhoto_title':'Все фотографии',   // 所有照片
-    'toolbarPhoto_tbUploadBtn':'Загрузить фото',   // 上传照片
-    'toolbarPhoto_tbBtnAdd':'Добавить фото',   // 添加照片
-    'toolbarPhoto_tbBtnCreatealbumPrivate':'Создать личный альбом',   // 创建个人相册
-    'toolbarPhoto_tbBtnCreatealbumShare':'Создать общий альбом',   // 创建共享相册
-    'toolbarPhoto_tbBtnTimeline':'По месяцам группировка',   // 按月分组
-    'toolbarPhoto_tbBtnBatch':'Управление альбомами',   // 批量管理
-    'toolbarPhoto_tbBtnMore':'Больше',   // 更多
-    'toolbarPhoto_tbBtnDl':'Загрузить',   // 下载
-    'toolbarPhoto_tbBtnDel':'Удалить',   // 删除
-    'toolbarPhoto_tbBtnDelFromAlbum':'Удалить',   // 删除
-    'toolbarPhoto_tbBtnMove':'Добавить в альбом',   // 添加到相册
-    'toolbarPhoto_tbBtnDone':'Завершить',   // 完成
+	'crumb_back'         : 'Назад',   // 返回上一级
+	'crumb_firstItem'    : 'Все файлы',   // 全部文件
+	'crumb_recyclePrompt': '(Совет: файлы в корзине не занимают места, и сохраняются в течение 90 дней, после чего будут автоматически удалены.)',   // （温馨提示：回收站文件不占用您云盘空间，保留90天后将自动删除。）
 
-    //'toolbarPhoto_':'Последние',   // 最近上传
-    //'toolbarPhoto_':'По годам',   // 按年分组
-    //'toolbarPhoto_':'По месяцам',   // 按月分组
-    //'toolbarPhoto_':'По дням',   // 按天分组
+	'column_name': 'Имя файла',   // 文件名
+	'column_size': 'Размер',   // 大小
+	'column_time': 'Дата',   // 修改日期
+	'column_code': 'Код',   // 提取码
+	'column_hit' : 'Загрузки',   // 下载次数
+	'column_path': 'Каталог',   // 所在目录
 
-    //'toolbarPhoto_':'Загрузить фото',   // 从本地上传 Загрузить с локального
-    //'toolbarPhoto_':'Добавить фото',   // 添加已有照片 Добавить существующие фотографии
-    //'toolbarPhoto_':'',   //
-    //'toolbarPhoto_':'',   //
-    //'toolbarPhoto_':'',   //
-    //'toolbarPhoto_':'',   //
-    //'toolbarPhoto_':'',   //
-    //'toolbarPhoto_':'',   //
+	'fileListHistory_columnHisversionid': 'Версия',   // 时光号
+	'fileListHistory_columnHissize'     : 'Размер',   // 大小
+	'fileListHistory_columnHistime'     : 'Дата изменения',   // 修改日期
 
-    'crumb_back'         : 'Назад',   // 返回上一级
-    'crumb_firstItem'    : 'Все файлы',   // 全部文件
-    'crumb_recyclePrompt': '(Совет: файлы в корзине не занимают места, и сохраняются в течение 90 дней, после чего будут автоматически удалены.)',   // （温馨提示：回收站文件不占用您云盘空间，保留90天后将自动删除。）
+	// sfile
+	'safe_openPass'       : 'Войти',   // 启用保险箱
+	'safe_previewInitFile': 'Узнать',   // 简单了解一下
 
-    'column_name': 'Имя файла',   // 文件名
-    'column_size': 'Размер',   // 大小
-    'column_time': 'Дата',   // 修改日期
-    'column_code': 'Код',   // 提取码
-    'column_hit' : 'Загрузки',   // 下载次数
-    'column_path': 'Каталог',   // 所在目录
+	'dynamic_tabAll'    : 'Все',   // 所有操作
+	'dynamic_tabFile'   : 'Файлы',   // 文件操作
+	'dynamic_tabShare'  : 'Обмен',   // 分享操作
+	'dynamic_btnBlue'   : 'Обновить',   // 刷新
+	'dynamic_btnGray'   : 'Очистка истории',   // 清空操作历史
+	'dynamic_objDict'   : {
+		'你删除了': 'Удалено',   // 你删除了
+		'你添加了': 'Добавлено',   // 你添加了
+		'你添加'  : 'Добавлено',   // 你添加
+		'你将'    : ' ',   // 你将
+		'等'     : 'и ',   // 等
+		'个文件'  : ' файлов ',   // 个文件
+		'到'     : ' в',   // 到
+		'中的'   : 'из',   // 中的
+		'重命名为': 'переименовано в'   // 重命名为
+	},
+	'dynamic_loadingTip': 'Загрузка истории операций...',   // 正在加载操作历史...
+	'dynamic_limitTip'  : 'Последние 1000 записей',   // 显示最近1000条记录
 
-    'fileListHistory_columnHisversionid': 'Версия',   // 时光号
-    'fileListHistory_columnHissize'     : 'Размер',   // 大小
-    'fileListHistory_columnHistime'     : 'Дата изменения',   // 修改日期
+	// x-yp
+	'x_rename'            : 'Переименовать',   // 重命名
+	'x_sfilemove'         : 'Переместить',   // 移动
+	'x_moveoutsfile'      : 'Из сейфа',   // 转出文件保险箱
+	'x_filehistory'       : 'История',   // 文件时光机
+	'x_move'              : 'Переместить',   // 移动
+	'x_moveinsfile'       : 'В сейф',   // 转入文件保险箱
+	'x_offline'           : 'Загрузить оффлайн',   // 离线下载
+	'x_opendoc'           : 'Посмотреть онлайн',   // 在线查看
+	'x_dl'                : 'Скачать',   // 下载
+	'x_packDl'            : 'Скачать',   // 下载
+	'x_del'               : 'Удалить',   // 删除
+	'x_restore'           : 'Восстановить',   // 还原
+	'x_diskdel'           : 'Удалить',   // 删除
+	'x_moveinfile'        : 'В сейф',   // 转入文件保险箱
+	'x_link'              : 'Общий доступ',   // 分享
+	'x_linkBatch'         : 'Общий доступ',   // 分享
+	'x_dellink'           : 'Отменить общий доступ',   // 取消分享
+	'x_linkView'          : 'Просмотреть ссылки',   // 查看分享链接
+	'x_linkDel'           : 'Отменить общий доступ',   // 取消分享
+	'x_linkCopy'          : 'Копировать ссылку',   // 复制分享链接
+	'x_extractOn'         : 'Возможность извлечения кода',   // 启用提取码
+	'x_extractOff'        : 'Отмена извлечения кода',   // 取消提取码
+	'x_upload'            : 'Загрузить файл',   // 上传文件
+	'x_new'               : 'Новая папка',   // 新建文件夹
+	'x_refresh'           : 'Обновить',   // 刷新
+	'x_copyPwd'           : 'Копировать',   // 复制
 
-    'dynamic_tabAll'    : 'Все',   // 所有操作
-    'dynamic_tabFile'   : 'Файлы',   // 文件操作
-    'dynamic_tabShare'  : 'Обмен',   // 分享操作
-    'dynamic_btnBlue'   : 'Обновить',   // 刷新
-    'dynamic_btnGray'   : 'Очистка истории',   // 清空操作历史
-    'dynamic_objDict'   : {
-        '你删除了': 'Удалено',   // 你删除了
-        '你添加了': 'Добавлено',   // 你添加了
-        '你添加'  : 'Добавлено',   // 你添加
-        '你将'    : ' ',   // 你将
-        '等'     : 'и ',   // 等
-        '个文件'  : ' файлов ',   // 个文件
-        '到'     : ' в',   // 到
-        '中的'   : 'из',   // 中的
-        '重命名为': 'переименовано в'   // 重命名为
+	'BasePanel_closeLink'   : 'Закрыть',   // 关闭
+	'BasePanel_minimizeLink': 'Минимизитовать',   // 关闭
+
+	"PanelUpload_hd"                : 'Загрузка файлов в облако',   // 上传文件到360云盘
+	"PanelUpload_pluginTip"         : 'Установите плагин для ускорения и загрузки больших файлов. ',   // 当前浏览器可升级为“云加速上传”，支持文件秒传、断点续传、大文件上传
+	"PanelUpload_pluginTip_a"       : 'Установить плагин',   // 安装升级控件
+	"PanelUpload_selectFileBtn"     : 'Выбрать',   // 添加文件
+	"PanelUpload_fileSelect"        : 'Файл',   // 添加文件
+	"PanelUpload_folderSelect"      : 'Папку',   // 添加文件夹
+	"PanelUpload_YPUpload2"         : 'Пожалуйста, выберите файл для загрузки',   // 请选择要上传的文件
+	"PanelUpload_uploadDeny1"       : 'Не могут быть загружены в текущий каталог, вы можете загрузить в каталог',   // 不可上传至当前目录，可上传至“
+	"PanelUpload_uploadDeny2"       : 'и его подпапки',   // ”中及其子文件
+	"PanelUpload_uploadDeny_s"      : 'Все файлы',   // 全部文件
+	"PanelUpload_uploadPath"        : 'В: ',   // 到：
+	"PanelUpload_networkAbnormalTip": 'Проблемы с сетью, загрузка приостановлена. Пожалуйста, проверьте вашу сеть',   // 网络异常，上传暂停。请检查您的网络
+	"PanelUpload_dragTip"           : 'Перетащите файлы для загрузки',   // 试试将电脑里的文件拖拽到此上传
+	"PanelUpload_dragTip_p"         : '(Ваш браузер поддерживает перетаскивание)',   // （您的浏览器支持此拖拽功能）
+	//    'PanelUpload_uploadTips_p1' : 'Макс. размер файла 360Мб ',   // 网页版单文件最大支持360M，
+	"PanelUpload_uploadTips_p1"     : 'Для загрузки файлов больше 360Мб (до 10Гб) ',   // 网页版单文件最大支持360M，
+	"PanelUpload_uploadTips_p2"     : ' для загрузки файлов 10Гб',   // ，上传10G超大文件
+	"PanelUpload_uploadTips_a"      : 'установить клиент PC',   // 安装PC客户端
+	"PanelUpload_uploadStatusBtn"   : 'Завершить',   // 完成
+	"PanelUpload_warningNote"       : 'Инструкция',   // 上传须知
+	"PanelUpload_H_tooltip"         : '360 запрещает загружать, посылать, передавать или любым другим способом размещать и/или распространять контент, который является незаконным, вредоносным, клеветническим, оскорбляет нравственность, демонстрирует (или является пропагандой) насилия и жестокости, нарушает права интеллектуальной собственности, пропагандирует ненависть и/или дискриминацию людей по расовому, этническому, половому, религиозному, социальному признакам, содержит оскорбления в адрес каких-либо лиц или организаций, содержит элементы (или является пропагандой) порнографии, детской эротики.',   // 严禁利用360云盘存储、下载、传播暴力恐怖音视频，以及其他任何非法、有害信息，一经发现将严格按照相关法律法规处理。
+	"PanelUpload_em"                : 'Отменить',   // 取消
+	"PanelUpload_info1"             : 'Загружено: ',   // 已上传：
+	"PanelUpload_info2"             : 'Скорость: ',   // 速度：
+	"PanelUpload_info3"             : 'Осталось: ',   // 剩余时间：
+
+	'PanelFileBox_hd'    : 'Переместить файл (папку)',   // 移动文件（夹）
+	'PanelFileBox_msg'   : 'Выберите место для перемещения',   // 选择移动到的位置
+	'PanelFileBox_move'  : 'Переместить',   // 确定移动
+	'PanelFileBox_cancel': 'Отмена',   // 取消
+
+	'PanelLottery_content0_p1'   : 'Вы выиграли ',   // 恭喜您，本次抽奖获得了
+	'PanelLottery_content0_p2'   : ' свободного места.',   // 永久免费空间。
+	'PanelLottery_stars'         : 'Удача: ',   // 幸运指数：
+	'PanelLottery_sina'          : 'В Weibo',   // 转发到新浪微博
+	'PanelLottery_tencent'       : 'В Tencent',   // 转发到腾讯微博
+	'PanelLottery_lotteryRecords': 'Мои призы',   // 查看抽奖记录
+	'PanelLottery_content1_p1'   : 'Розыгрыш не удался!',   // 抱歉，抽奖失败！
+	'PanelLottery_content1_p2'   : 'Попробуйте позже.',   // 请稍后重试。
+	'PanelLottery_content2_p1'   : 'Вы участвовали!',   // 今日已抽奖！
+	'PanelLottery_content2_p2'   : 'Попробуйте завтра.',   // 请明日再来。
+
+	'dialogTitlebarClose'   : 'Закрыть',   // 关闭
+	'dialogTitlebarMinimize': 'Минимизировать',   // 最小化
+	'dialogTitlebarMaximize': 'Максимизировать',   // 最大化
+
+	'dialogBtnOk'    : 'OK',   // 确定
+	'dialogBtnCancel': 'Отмена',   // 取消
+
+	"PanelOffdl_hd"            : 'Управление задачами',   // 任务管理
+	"PanelOffdl_offdlTitle1"   : 'Последние ',   // 最近
+	"PanelOffdl_offdlTitle2"   : ' оффлайн загрузок',   // 离线下载任务记录
+	"PanelOffdl_offdlBtnCreate": 'Создать',   // 新建普通下载
+	"PanelOffdl_columnName"    : 'Имя',   // 任务名
+	"PanelOffdl_columnSize"    : 'Размер',   // 大小
+	"PanelOffdl_columnStatus"  : 'Статус',   // 下载状态
+	"PanelOffdl_columnOp"      : 'Операция',   // 操作
+	"PanelOffdl_offdlSaveTip1" : 'Файлы сохраняется в ',   // 离线下载的文件统一保存到
+	"PanelOffdl_offdlSaveTip2" : ' папке',   // 文件夹里
+	"PanelOffdl_offdlSaveTip_s": '[специальной]',   // [来自-离线下载的文件]
+	"PanelOffdl_background"    : 'В фоне',   // 后台运行
+	"PanelOffdl_clean"         : 'Очистить',   // 清空历史记录
+
+	"PanelOffdlCreate_hd"         : 'Новая загрузка в автономном режиме',   // 新建离线下载任务
+	"PanelOffdlCreate_offdlTitle" : 'Пожалуйста, введите адрес ссылки, для скачивания файла:',   // 请输入要下载的文件链接地址：
+	"PanelOffdlCreate_placeholder": 'Поддержка HTTP, FTP ссылок',   // 支持HTTP、FTP链接下载
+	"PanelOffdlCreate_cancel"     : 'Отмена',   // 取消
+	"PanelOffdlCreate_start"      : 'Начать',   // 开始下载
+
+	'dialogDel_title'  : 'Удалить',   // 删除
+	'dialogDel_msg1'   : 'Вы уверены, что хотите удалить ',   // 您确定要删除这
+	'dialogDel_msg2'   : ' элемент',   // 项？
+	'dialogDel_msgInfo': 'После удаления можно восстановить из корзины.',   // 删除后可在回收站还原。
+
+	'player_pre'      : 'Предыдущий трек',   // 上一首
+	'player_play'     : 'Пауза [Играть]',   // 暂停[播放]
+	'player_next'     : 'Следующий трек',   // 下一首
+	'player_cycle'    : 'Повторять',   // 顺序播放
+	'player_random'   : 'Воспроизведение в случайном порядке',   // 随机播放
+	'player_single'   : 'Один цикл',   // 单曲循环
+	'player_volume'   : 'Без звука',   // 静音
+	'player_btnPlay'  : 'Играть',   // 播放
+	'player_btnPause' : 'Пауза',   // 暂停
+	'player_btnDel'   : 'Удалить',   // 删除
+	'player_selectAll': 'Выбрать все',   // 全选
+	'player_remove'   : 'Удалить',   // 删除
+	'player_empty'    : 'Очистить список',   // 清空列表
+
+	'pageNav_info': 'По 50 объектов на странице',   // 当页已加载50条
+	'pageNav_prev': '<Предыдущая',   // <上一页
+	'pageNav_next': 'Следующая>',   // 下一页>
+
+	'loadingMask': 'Загрузка списка файлов...',   // 加载文件列表中...
+	'dropOverlay': 'Перетащите файлы для загрузки',   // 将文件拖放至此可以上传
+
+	'leftPanel_allPhoto'    : 'Все фотографии', // 所有照片
+	'leftPanel_privateAlbum': 'Личный альбом', // 个人相册
+	'leftPanel_shareAlbum': 'Общий альбом', // 共享相册
+
+	'toolbarPhoto_title':'Все фотографии',   // 所有照片
+	'toolbarPhoto_tbUploadBtn':'Загрузить фото',   // 上传照片
+	'toolbarPhoto_tbBtnAdd':'Добавить фото',   // 添加照片
+	'toolbarPhoto_tbBtnCreatealbumPrivate':'Создать личный альбом',   // 创建个人相册
+	'toolbarPhoto_tbBtnCreatealbumShare':'Создать общий альбом',   // 创建共享相册
+	'toolbarPhoto_tbBtnTimeline':'По месяцам',   // 按月分组
+	'toolbarPhoto_tbBtnBatch':'Управление альбомами',   // 批量管理
+	'toolbarPhoto_tbBtnMore':'Больше',   // 更多
+	'toolbarPhoto_tbBtnDl':'Загрузить',   // 下载
+	'toolbarPhoto_tbBtnDel':'Удалить',   // 删除
+	'toolbarPhoto_tbBtnDelFromAlbum':'Удалить',   // 删除
+	'toolbarPhoto_tbBtnMove':'Добавить в альбом',   // 添加到相册
+	'toolbarPhoto_tbBtnDone':'Завершить',   // 完成
+
+	'toolbarPhoto_timeline0':'Последние',   // 最近上传
+    'toolbarPhoto_timeline1':'По годам',   // 按年分组
+    'toolbarPhoto_timeline2':'По месяцам',   // 按月分组
+    'toolbarPhoto_timeline3':'По дням',   // 按天分组
+
+    'toolbarPhoto_newAlbum' : 'Новый фотоальбом',   // 新建个人相册
+    'toolbarPhoto_newAlbumName' : 'Новый альбом',   // 新建相册
+
+    'toolbarPhoto_add0':'Загрузить фото',   // 从本地上传 Загрузить с локального
+    'toolbarPhoto_add1':'Добавить фото',   // 添加已有照片 Добавить существующие фотографии
+
+    'toolbarPhoto_more0':'Управление альбомами',   // 批量管理
+    'toolbarPhoto_more1':'Удалить альбом',   // 删除此相册
+
+    'toolbarPhoto_date':{
+        '年': '-',
+        '月': '-',
+        '日': '-'
     },
-    'dynamic_loadingTip': 'Загрузка истории операций...',   // 正在加载操作历史...
-    'dynamic_limitTip'  : 'Последние 1000 записей',   // 显示最近1000条记录
-    'loadingMask': 'Загрузка списка файлов...',   // 加载文件列表中...
-    'dropOverlay': 'Перетащите файлы для загрузки',   // 将文件拖放至此可以上传
+    'toolbarPhoto_count':' фото',   // 张
+    'toolbarPhoto_chkall':'Выбрать все',   // 全选
 
-    // sfile
-    'safe_openPass'       : 'Войти',   // 启用保险箱
-    'safe_previewInitFile': 'Узнать',   // 简单了解一下
+    'toolbarPhoto_load' : 'Загрузка фото ...',   // 正在努力加载图片...
 
-    // x-yp
-    'x_rename'            : 'Переименовать',   // 重命名
-    'x_sfilemove'         : 'Переместить',   // 移动
-    'x_moveoutsfile'      : 'Из сейфа',   // 转出文件保险箱
-    'x_filehistory'       : 'История',   // 文件时光机
-    'x_move'              : 'Переместить',   // 移动
-    'x_moveinsfile'       : 'В сейф',   // 转入文件保险箱
-    'x_offline'           : 'Загрузить оффлайн',   // 离线下载
-    'x_opendoc'           : 'Посмотреть онлайн',   // 在线查看
-    'x_dl'                : 'Скачать',   // 下载
-    'x_packDl'            : 'Скачать',   // 下载
-    'x_del'               : 'Удалить',   // 删除
-    'x_restore'           : 'Восстановить',   // 还原
-    'x_diskdel'           : 'Удалить',   // 删除
-    'x_moveinfile'        : 'В сейф',   // 转入文件保险箱
-    'x_link'              : 'Общий доступ',   // 分享
-    'x_linkBatch'         : 'Общий доступ',   // 分享
-    'x_dellink'           : 'Отменить общий доступ',   // 取消分享
-    'x_linkView'          : 'Просмотреть ссылки',   // 查看分享链接
-    'x_linkDel'           : 'Отменить общий доступ',   // 取消分享
-    'x_linkCopy'          : 'Копировать ссылку',   // 复制分享链接
-    'x_extractOn'         : 'Возможность извлечения кода',   // 启用提取码
-    'x_extractOff'        : 'Отмена извлечения кода',   // 取消提取码
-    'x_upload'            : 'Загрузить файл',   // 上传文件
-    'x_new'               : 'Новая папка',   // 新建文件夹
-    'x_refresh'           : 'Обновить',   // 刷新
-    'x_copyPwd'           : 'Копировать',   // 复制
+	////#include accountsInfo.jdic
 
-    'BasePanel_closeLink'   : 'Закрыть',   // 关闭
-    'BasePanel_minimizeLink': 'Минимизитовать',   // 关闭
-
-    "PanelUpload_hd"                : 'Загрузка файлов в облако',   // 上传文件到360云盘
-    "PanelUpload_pluginTip"         : 'Установите плагин для ускорения и загрузки больших файлов. ',   // 当前浏览器可升级为“云加速上传”，支持文件秒传、断点续传、大文件上传
-    "PanelUpload_pluginTip_a"       : 'Установить плагин',   // 安装升级控件
-    "PanelUpload_selectFileBtn"     : 'Выбрать',   // 添加文件
-    "PanelUpload_fileSelect"        : 'Файл',   // 添加文件
-    "PanelUpload_folderSelect"      : 'Папку',   // 添加文件夹
-    "PanelUpload_YPUpload2"         : 'Пожалуйста, выберите файл для загрузки',   // 请选择要上传的文件
-    "PanelUpload_uploadDeny1"       : 'Не могут быть загружены в текущий каталог, вы можете загрузить в каталог',   // 不可上传至当前目录，可上传至“
-    "PanelUpload_uploadDeny2"       : 'и его подпапки',   // ”中及其子文件
-    "PanelUpload_uploadDeny_s"      : 'Все файлы',   // 全部文件
-    "PanelUpload_uploadPath"        : 'В: ',   // 到：
-    "PanelUpload_networkAbnormalTip": 'Проблемы с сетью, загрузка приостановлена. Пожалуйста, проверьте вашу сеть',   // 网络异常，上传暂停。请检查您的网络
-    "PanelUpload_dragTip"           : 'Перетащите файлы для загрузки',   // 试试将电脑里的文件拖拽到此上传
-    "PanelUpload_dragTip_p"         : '(Ваш браузер поддерживает перетаскивание)',   // （您的浏览器支持此拖拽功能）
-    //    'PanelUpload_uploadTips_p1' : 'Макс. размер файла 360Мб ',   // 网页版单文件最大支持360M，
-    "PanelUpload_uploadTips_p1"     : 'Для загрузки файлов больше 360Мб (до 10Гб) ',   // 网页版单文件最大支持360M，
-    "PanelUpload_uploadTips_p2"     : ' для загрузки файлов 10Гб',   // ，上传10G超大文件
-    "PanelUpload_uploadTips_a"      : 'установить клиент PC',   // 安装PC客户端
-    "PanelUpload_uploadStatusBtn"   : 'Завершить',   // 完成
-    "PanelUpload_warningNote"       : 'Инструкция',   // 上传须知
-    "PanelUpload_H_tooltip"         : '360 запрещает загружать, посылать, передавать или любым другим способом размещать и/или распространять контент, который является незаконным, вредоносным, клеветническим, оскорбляет нравственность, демонстрирует (или является пропагандой) насилия и жестокости, нарушает права интеллектуальной собственности, пропагандирует ненависть и/или дискриминацию людей по расовому, этническому, половому, религиозному, социальному признакам, содержит оскорбления в адрес каких-либо лиц или организаций, содержит элементы (или является пропагандой) порнографии, детской эротики.',   // 严禁利用360云盘存储、下载、传播暴力恐怖音视频，以及其他任何非法、有害信息，一经发现将严格按照相关法律法规处理。
-    "PanelUpload_em"                : 'Отменить',   // 取消
-    "PanelUpload_info1"             : 'Загружено: ',   // 已上传：
-    "PanelUpload_info2"             : 'Скорость: ',   // 速度：
-    "PanelUpload_info3"             : 'Осталось: ',   // 剩余时间：
-
-    "PanelOffdl_hd"            : 'Управление задачами',   // 任务管理
-    "PanelOffdl_offdlTitle1"   : 'Последние ',   // 最近
-    "PanelOffdl_offdlTitle2"   : ' оффлайн загрузок',   // 离线下载任务记录
-    "PanelOffdl_offdlBtnCreate": 'Создать',   // 新建普通下载
-    "PanelOffdl_columnName"    : 'Имя',   // 任务名
-    "PanelOffdl_columnSize"    : 'Размер',   // 大小
-    "PanelOffdl_columnStatus"  : 'Статус',   // 下载状态
-    "PanelOffdl_columnOp"      : 'Операция',   // 操作
-    "PanelOffdl_offdlSaveTip1" : 'Файлы сохраняется в ',   // 离线下载的文件统一保存到
-    "PanelOffdl_offdlSaveTip2" : ' папке',   // 文件夹里
-    "PanelOffdl_offdlSaveTip_s": '[специальной]',   // [来自-离线下载的文件]
-    "PanelOffdl_background"    : 'В фоне',   // 后台运行
-    "PanelOffdl_clean"         : 'Очистить',   // 清空历史记录
-
-    "PanelOffdlCreate_hd"         : 'Новая загрузка в автономном режиме',   // 新建离线下载任务
-    "PanelOffdlCreate_offdlTitle" : 'Пожалуйста, введите адрес ссылки, для скачивания файла:',   // 请输入要下载的文件链接地址：
-    "PanelOffdlCreate_placeholder": 'Поддержка HTTP, FTP ссылок',   // 支持HTTP、FTP链接下载
-    "PanelOffdlCreate_cancel"     : 'Отмена',   // 取消
-    "PanelOffdlCreate_start"      : 'Начать',   // 开始下载
-
-    'PanelFileBox_hd'    : 'Переместить файл (папку)',   // 移动文件（夹）
-    'PanelFileBox_msg'   : 'Выберите место для перемещения',   // 选择移动到的位置
-    'PanelFileBox_move'  : 'Переместить',   // 确定移动
-    'PanelFileBox_cancel': 'Отмена',   // 取消
-
-    'PanelLottery_content0_p1'   : 'Вы выиграли ',   // 恭喜您，本次抽奖获得了
-    'PanelLottery_content0_p2'   : ' свободного места.',   // 永久免费空间。
-    'PanelLottery_stars'         : 'Удача: ',   // 幸运指数：
-    'PanelLottery_sina'          : 'В Weibo',   // 转发到新浪微博
-    'PanelLottery_tencent'       : 'В Tencent',   // 转发到腾讯微博
-    'PanelLottery_lotteryRecords': 'Мои призы',   // 查看抽奖记录
-    'PanelLottery_content1_p1'   : 'Розыгрыш не удался!',   // 抱歉，抽奖失败！
-    'PanelLottery_content1_p2'   : 'Попробуйте позже.',   // 请稍后重试。
-    'PanelLottery_content2_p1'   : 'Вы участвовали!',   // 今日已抽奖！
-    'PanelLottery_content2_p2'   : 'Попробуйте завтра.',   // 请明日再来。
-
-    'dialogTitlebarClose'   : 'Закрыть',   // 关闭
-    'dialogTitlebarMinimize': 'Минимизировать',   // 最小化
-    'dialogTitlebarMaximize': 'Максимизировать',   // 最大化
-
-    'player_pre'      : 'Предыдущий трек',   // 上一首
-    'player_play'     : 'Пауза [Играть]',   // 暂停[播放]
-    'player_next'     : 'Следующий трек',   // 下一首
-    'player_cycle'    : 'Повторять',   // 顺序播放
-    'player_random'   : 'Воспроизведение в случайном порядке',   // 随机播放
-    'player_single'   : 'Один цикл',   // 单曲循环
-    'player_volume'   : 'Без звука',   // 静音
-    'player_btnPlay'  : 'Играть',   // 播放
-    'player_btnPause' : 'Пауза',   // 暂停
-    'player_btnDel'   : 'Удалить',   // 删除
-    'player_selectAll': 'Выбрать все',   // 全选
-    'player_remove'   : 'Удалить',   // 删除
-    'player_empty'    : 'Очистить список',   // 清空列表
-
-    'pageNav_info': 'По 50 объектов на странице',   // 当页已加载50条
-    'pageNav_prev': '<Предыдущая',   // <上一页
-    'pageNav_next': 'Следующая>',   // 下一页>
-
-    // accounts-info
-    'h1'                : '',   // 帐号安全中心
-    'yLevel1'                : '',   // 云盘等级：
-    'yLevel2'                : '',   // 级
-    'index'                : '',   // 更改资料
-    'chuserpwd'                : '',   // 修改密码
-    'zoneInfo1'                : '',   // 云盘总空间：
-    'zoneInfo2'                : '',   // ,可用空间
-    'lastLogin'                : '',   // 上次登录时间：
-    'tab1'                : '',   // 密码安全
-    'tab2'                : '',   // 最近登录记录
-    ''                : '',   //
-
-    ''                : ''   //
+	'to be continued...': ''
 };
 
-function rename(sel, attr, text, nn) {
-    nn = nn || 0;
-
-    if (sel == null) return;
-
-    var rn = function(el) {
-        switch (attr) {
-            case 'text':
-                var ch = el.childNodes;
-                for (var j = nn; j < ch.length; j++) {
-                    if (ch[j].nodeName === '#text') {
-                        ch[j].textContent = text;
-                        break;
-                    }
-                }
-                break;
-            case 'title':
-                el.title = text;
-                break;
-            case 'placeholder':
-                el.placeholder = text;
-                break;
-            case 'value':
-                el.value = text;
-                break;
-            default:
-                break;
-        }
-    };
-
-    if (typeof(sel) == 'string') {
-        var noda;
-        if (noda = document.querySelectorAll(sel)) {
-            for (var i = 0; i < noda.length; i++) {
-                rn(noda[i]);
-            }
-        }
-    }
-
-    if (typeof(sel) == 'object') {
-        rn(sel);
-    }
-}
-
-function rename_arrs(sel, objDict) {
-
-	if (sel == null) return;
-
-	var rn = function(el) {
-		var text = el.textContent;
-		if (text) {
-			for (var word in objDict) {
-				var st = word.toString();
-				var rt = objDict[word];
-				text = text.replace(st, rt);
-			}
-			el.textContent = text;
-		}
-	};
-
-	if (typeof(sel) == 'string') {
-		var nodes;
-		if (nodes = document.querySelectorAll(sel)) {
-			for (var i = 0; i < nodes.length; i++) {
-				rn(nodes[i]);
-			}
-		}
-	}
-
-	if (typeof (sel) == 'object') {
-		for (var j=0; j<sel.length; j++) {
-			rn(sel[j]);
-		}
-	}
-
-}
-
-function runAsync(func) {
-	setTimeout(func, 0);
-}
 if (window.location.pathname === '/' && window.location.hostname.indexOf('photo') === -1) {
     translate_header();
     translate_footer();
     translate_loginPanel();
     translate_loginSubmit();
-    translate_downloadList();
+    translate_loginDownloadList();
     replace_slides();
 }
 
@@ -577,18 +507,9 @@ if (window.location.pathname.indexOf('/my') === 0) {
                 if (addedNoda.classList.contains('panel')) {
 
                     if (addedNoda.getElementsByClassName('upload-toolbar').length) {
-                        translate_PanelUpload(addedNoda.id);
+                        translate_PanelUpload(addedNoda);
                         create_observerPanel(addedNoda, translate_PanelUpload);
                     }
-
-                    //if (addedNoda.getElementsByClassName('offdl-dia').length) {
-                    //    create_observerPanel(addedNoda, translate_PanelOffdl);
-                    //    translate_PanelOffdl(addedNoda);
-                    //}
-
-                    //if (addedNoda.getElementsByClassName('offdl-dia-create').length) {
-                    //    translate_PanelOffdlCreate(addedNoda);
-                    //}
 
                     if (addedNoda.getElementsByClassName('fileBox').length) {
                         translate_PanelFileBox(addedNoda.id);
@@ -602,17 +523,23 @@ if (window.location.pathname.indexOf('/my') === 0) {
                 if (addedNoda.classList.contains('ui-dialog')) {
 
                     if (addedNoda.getElementsByClassName('offdl-dia').length) {
-                        create_observerPanel(addedNoda, translate_PanelOffdl);
-                        translate_PanelOffdl(addedNoda);
+                        translate_dialogOffdl(addedNoda);
+                        create_observerPanel(addedNoda, translate_dialogOffdl);
                     }
 
                     if (addedNoda.getElementsByClassName('offdl-dia-create').length) {
-                        translate_PanelOffdlCreate(addedNoda);
+                        translate_dialogOffdlCreate(addedNoda);
                     }
 
                     if (addedNoda.getElementsByClassName('fileBox').length) {
                         translate_PanelFileBox(addedNoda.id);
                         create_observerPanel(addedNoda, translate_PanelFileBox);
+                    }
+
+                    if (addedNoda.getElementsByClassName('ui-dialog-title').length) {
+                        if (addedNoda.querySelector('.ui-dialog-title').textContent == '删除') {
+                            translate_dialogDel(addedNoda);
+                        }
                     }
 
                     //if (addedNoda.getElementsByClassName('sina').length) {
@@ -642,141 +569,24 @@ if (window.location.hostname.indexOf('photo') === 0) {
 
 	translate_topPanel();
 	translate_userInfo();
-	translate_leftPanelPhoto();
-	translate_toolbarPhoto();
-
-	//translate_fileListHistory();
-	//translate_column();
-	//translate_safe();
-	//translate_loadingMask();
+	translate_photoLeftPanel();
+	translate_photoToolbar();
+	translate_photoCrumb();
 
 	var target = document.getElementsByTagName('body')[0];
 	var observer = new MutationObserver(function (mutations) {
 
-		//console.log('mutationPhoto');
+		runAsync(translate_photoCrumb);
+		runAsync(translate_photoToolbar_timeline);
+		runAsync(translate_photoToolbar_newAlbum);
+		runAsync(translate_photoToolbar_add);
+		runAsync(translate_photoToolbar_more);
+		runAsync(translate_photoWaterfall);
 
-		runAsync(translate_crumbPhoto);
-		//runAsync(translate_loadingMask);
-		//runAsync(translate_dropOverlay);
-		//runAsync(translate_toolbar);
-		//runAsync(translate_column);
-		//runAsync(translate_copyBox);
-		//runAsync(translate_x_yp_1);
-		//runAsync(translate_x_yp_2);
-		//runAsync(translate_x_yp_3);
-		//runAsync(translate_x_yp_4);
-		//runAsync(translate_pageNav);
-		//runAsync(translate_search);
-		//runAsync(translate_dynamic);
+		rename('.upload-btn', 'title', dict.toolbarPhoto_tbUploadBtn);
+		rename('.waterfall-preloading', 'text', dict.toolbarPhoto_load);
+		rename('.mod-imgthumb-createalbum .input-text', 'placeholder', dict.toolbarPhoto_newAlbumName);
 
-		mutations.forEach(function (mutation) {
-
-			if (mutation.addedNodes.length) {
-				//var addedNoda = mutation.addedNodes[0];
-
-				//if (addedNoda.id === 'loadingMask') {
-				//    translate_loadingMask();
-				//}
-				//if (addedNoda.id === 'dropOverlay') {
-				//    translate_dropOverlay();
-				//}
-				//if (mutation.target.classList.contains('toolbar')) {
-				//    translate_toolbar();
-				//}
-				//if (mutation.target.id === 'crumb') {
-				//    translate_crumb();
-				//}
-				//if (mutation.target.classList.contains('path-item')) {
-				//    translate_crumb();
-				//}
-				//if (mutation.target.id === 'fileListHead') {
-				//    translate_column();
-				//}
-				//if (addedNoda.id === 'sfile-openSfile') {
-				//    translate_column();
-				//}
-				//if (addedNoda.id === 'list') {
-				//    translate_copyBox();
-				//}
-				//if (addedNoda.id === 'x-yp-1') {
-				//    translate_x_yp_1();
-				//}
-				//if (addedNoda.id === 'x-yp-2') {
-				//    translate_x_yp_2();
-				//}
-				//if (addedNoda.id === 'x-yp-3') {
-				//    translate_x_yp_3();
-				//}
-				//if (addedNoda.id === 'x-yp-4') {
-				//    translate_x_yp_4();
-				//}
-				//translate_toolbar();
-				//translate_crumb();
-				//translate_column();
-				//translate_loadingMask();
-				//if (mutation.addedNodes.length) {
-				//    var i;
-				//    for (i = 0; i < mutation.addedNodes.length; i++) {
-				//        if (mutation.addedNodes[i].classList.contains('file-list-head')) {
-				//            translate_column();
-				//        }
-				//        if (mutation.addedNodes[i].classList.contains('page-nav')) {
-				//            translate_pageNav();
-				//        }
-				//    }
-				//}
-				//if (addedNoda.classList.contains('panel')) {
-				//
-				//	if (addedNoda.getElementsByClassName('upload-toolbar').length) {
-				//		translate_PanelUpload(addedNoda.id);
-				//		create_observerPanel(addedNoda, translate_PanelUpload);
-				//	}
-				//
-				//	//if (addedNoda.getElementsByClassName('offdl-dia').length) {
-				//	//    create_observerPanel(addedNoda, translate_PanelOffdl);
-				//	//    translate_PanelOffdl(addedNoda);
-				//	//}
-				//
-				//	//if (addedNoda.getElementsByClassName('offdl-dia-create').length) {
-				//	//    translate_PanelOffdlCreate(addedNoda);
-				//	//}
-				//
-				//	if (addedNoda.getElementsByClassName('fileBox').length) {
-				//		translate_PanelFileBox(addedNoda.id);
-				//		create_observerPanel(addedNoda, translate_PanelFileBox);
-				//	}
-				//
-				//	if (addedNoda.getElementsByClassName('sina').length) {
-				//		translate_PanelLottery(addedNoda.id);
-				//	}
-				//}
-				//if (addedNoda.classList.contains('ui-dialog')) {
-				//
-				//	if (addedNoda.getElementsByClassName('offdl-dia').length) {
-				//		create_observerPanel(addedNoda, translate_PanelOffdl);
-				//		translate_PanelOffdl(addedNoda);
-				//	}
-				//
-				//	if (addedNoda.getElementsByClassName('offdl-dia-create').length) {
-				//		translate_PanelOffdlCreate(addedNoda);
-				//	}
-				//
-				//	if (addedNoda.getElementsByClassName('fileBox').length) {
-				//		translate_PanelFileBox(addedNoda.id);
-				//		create_observerPanel(addedNoda, translate_PanelFileBox);
-				//	}
-				//
-				//	//if (addedNoda.getElementsByClassName('sina').length) {
-				//	//    translate_PanelLottery(addedNoda.id);
-				//	//}
-				//}
-				//
-				//if (addedNoda.classList.contains('mc-player')) {
-				//	translate_McPlayer(addedNoda);
-				//	create_observerPanel(addedNoda, translate_McPlayer);
-				//}
-			}
-		});
 	});
 	var config = {
 		attributes   : false,
@@ -787,9 +597,97 @@ if (window.location.hostname.indexOf('photo') === 0) {
 	observer.observe(target, config);
 }
 
+function rename(sel, attr, text, nn) {
+    nn = nn || 0;
+
+    if (sel == null) return;
+
+    var rn = function(el) {
+        switch (attr) {
+            case 'text':
+                var ch = el.childNodes;
+                for (var j = nn; j < ch.length; j++) {
+                    if (ch[j].nodeName === '#text') {
+                        ch[j].textContent = text;
+                        break;
+                    }
+                }
+                break;
+            case 'title':
+                el.title = text;
+                break;
+            case 'placeholder':
+                el.placeholder = text;
+                break;
+            case 'value':
+                el.value = text;
+                break;
+            default:
+                break;
+        }
+    };
+
+    if (typeof(sel) == 'string') {
+        var noda;
+        if (noda = document.querySelectorAll(sel)) {
+            for (var i = 0; i < noda.length; i++) {
+                rn(noda[i]);
+            }
+        }
+    }
+
+    if (typeof(sel) == 'object') {
+        rn(sel);
+    }
+}
+
+function rename_arrs(sel, objDict) {
+
+	if (sel == null) return;
+
+	var rn = function(el) {
+		var text = el.textContent;
+		if (text) {
+			for (var word in objDict) {
+				var st = word.toString();
+				var rt = objDict[word];
+				text = text.replace(st, rt);
+			}
+			el.textContent = text;
+		}
+	};
+
+	if (typeof(sel) == 'string') {
+		var nodes;
+		if (nodes = document.querySelectorAll(sel)) {
+			for (var i = 0; i < nodes.length; i++) {
+				rn(nodes[i]);
+			}
+		}
+	}
+
+	if (typeof (sel) == 'object') {
+		for (var j=0; j<sel.length; j++) {
+			rn(sel[j]);
+		}
+	}
+
+}
+
+function runAsync(func) {
+	setTimeout(func, 0);
+}
+function replace_slides() {
+    var slides = document.querySelectorAll('.slide img');
+    for (var j = 0; j < slides.length; j++) {
+        slides[j].setAttribute('src', 'http://lorempixel.com/960/388/city/' + Math.floor(Math.random() * 10));
+        //slides[j].parentNode.getElementsByClassName('btn')[0].style.background = 'none';
+    }
+}
+
 function translate_header() {
     rename('title', 'text', dict.title);
-    rename('a.logo', 'text', dict.logo);
+    rename('a.logo', 'text', dict.nav_logo);
     rename('.nav a[href="http://huodong.yunpan.360.cn/xt"]', 'text', dict.nav_36);
     rename('.nav a[href="/"]', 'text', dict.nav_home);
     rename('.nav a[href="http://yunpan.360.cn/"]', 'text', dict.nav_home);
@@ -871,7 +769,7 @@ function translate_loginSubmit(dots) {
     observer.observe(target, config);
 }
 
-function translate_downloadList() {
+function translate_loginDownloadList() {
     rename('.download-list a[href="http://down.360safe.com/yunpan/360yunpan_setup.exe"]', 'text', dict.login_dl_pc);
     rename('.download-list a strong', 'text', dict.login_dl_apk);
     rename('.download-list a[href="http://down.360safe.com/yunpan/360yunpan_mac.pkg"]', 'text', dict.login_dl_mac);
@@ -885,14 +783,36 @@ function translate_downloadList() {
     qrcode.textContent = dict.login_qrcode;
     qrcode.style.width = '115px';
     qrcode.style.marginLeft = '32px';
-}
 
-function replace_slides() {
-    var slides = document.querySelectorAll('.slide img');
-    for (var j = 0; j < slides.length; j++) {
-        slides[j].setAttribute('src', 'http://lorempixel.com/960/388/city/' + Math.floor(Math.random() * 10));
-        //slides[j].parentNode.getElementsByClassName('btn')[0].style.background = 'none';
-    }
+    var style = function(el, parent, bgColor, bghColor) {
+        el.style.display = 'inline-block';
+        el.style.width = '145px';
+        el.style.lineHeight = '22px';
+        el.style.marginTop = '22px';
+        el.style.marginLeft = '70px';
+        el.style.background = bgColor;
+        el.style.textAlign = 'center';
+        el.style.color = '#FFF';
+        el.style.fontSize = '20px';
+        parent.onmouseover = function() {
+            el.style.background = bghColor;
+        };
+        parent.onmouseout = function() {
+            el.style.background = bgColor;
+        };
+    };
+
+    var btnPC = document.querySelector('.download-list .client-btn');
+    var labelPC = document.createElement('span');
+    labelPC.textContent = dict.login_clientBtn;
+    style(labelPC, btnPC, '#0E76BB', '#0D68A4');
+    btnPC.appendChild(labelPC);
+
+    var btnMob = document.querySelector('.download-list .mobile-btn');
+    var labelMob = document.createElement('span');
+    labelMob.textContent = dict.login_mobileBtn;
+    style(labelMob, btnMob, '#22C7AE', '#09B69C');
+    btnMob.appendChild(labelMob);
 }
 
 function translate_regPanel() {
@@ -983,13 +903,6 @@ function translate_leftPanel() {
     rename('#leftPanel .tab-dynamic .text', 'text', dict.leftPanel_dynamic);
     rename('#leftPanel .update-space', 'text', dict.leftPanel_space);
     rename('#leftPanel .copyright-protect a', 'text', dict.leftPanel_copyright);
-
-}
-
-function translate_leftPanelPhoto() {
-
-	rename('#leftPanel .all-photo .title', 'text', dict.leftPanel_allPhoto, 1);
-	rename('#leftPanel .private-album .title', 'text', dict.leftPanel_privateAlbum, 1);
 
 }
 
@@ -1099,41 +1012,6 @@ function translate_toolbar() {
     translate_displayMode();
 }
 
-function translate_toolbarPhoto() {
-	//translate_toolbar_btn();
-	//translate_toolbar_sort();
-	//translate_displayMode();
-
-	rename('#tbUploadBtn .label', 'text', dict.toolbarPhoto_tbUploadBtn);
-	rename('#tbUploadBtn', 'title', dict.toolbarPhoto_tbUploadBtn);
-	rename('.tb-btn-add .label', 'text', dict.toolbarPhoto_tbBtnAdd);
-	rename('.tb-btn-add', 'title', dict.toolbarPhoto_tbBtnAdd);
-	rename('.tb-btn-createalbum-private .label', 'text', dict.toolbarPhoto_tbBtnCreatealbumPrivate);
-	rename('.tb-btn-createalbum-private', 'title', dict.toolbarPhoto_tbBtnCreatealbumPrivate);
-	rename('.tb-btn-createalbum-share .label', 'text', dict.toolbarPhoto_tbBtnCreatealbumShare);
-	rename('.tb-btn-createalbum-share', 'title', dict.toolbarPhoto_tbBtnCreatealbumShare);
-	rename('.tb-btn-timeline .label', 'text', dict.toolbarPhoto_tbBtnTimeline);
-	//rename('.tb-btn-timeline', 'title', dict.toolbarPhoto_tbBtnTimeline);
-	rename('.tb-btn-batch .label', 'text', dict.toolbarPhoto_tbBtnBatch);
-	//rename('.tb-btn-batch', 'title', dict.toolbarPhoto_tbBtnBatch);
-	rename('.tb-btn-more .label', 'text', dict.toolbarPhoto_tbBtnMore);
-	//rename('.tb-btn-more', 'title', dict.toolbarPhoto_tbBtnMore);
-	rename('.tb-btn-dl .label', 'text', dict.toolbarPhoto_tbBtnDl);
-	//rename('.tb-btn-dl', 'title', dict.toolbarPhoto_tbBtnDl);
-	rename('.tb-btn-del .label', 'text', dict.toolbarPhoto_tbBtnDel);
-	//rename('.tb-btn-del', 'title', dict.toolbarPhoto_tbBtnDel);
-	rename('.tb-btn-del-from-album .label', 'text', dict.toolbarPhoto_tbBtnDelFromAlbum);
-	//rename('.tb-btn-del-from-album', 'title', dict.toolbarPhoto_tbBtnDelFromAlbum);
-	rename('.tb-btn-move .label', 'text', dict.toolbarPhoto_tbBtnMove);
-	//rename('.tb-btn-move', 'title', dict.toolbarPhoto_tbBtnMove);
-	rename('.tb-btn-done .label', 'text', dict.toolbarPhoto_tbBtnDone);
-	//rename('.tb-btn-done', 'title', dict.toolbarPhoto_tbBtnDone);
-
-	//rename('. .label', 'text', dict.toolbarPhoto_);
-	//rename('.', 'title', dict.toolbarPhoto_);
-
-}
-
 function translate_crumb() {
     var crumb;
     rename('#crumb .back', 'text', dict.crumb_back);
@@ -1153,10 +1031,7 @@ function translate_crumb() {
     }
 }
 
-function translate_crumbPhoto() {
-
-	rename('.toolbar .title', 'text', document.querySelector('#leftPanel .current .title').textContent);
-}function translate_column() {
+function translate_column() {
     rename('#fileListHead .column-name .file-sort', 'text', dict.column_name);
     rename('#fileListHead .column-size .file-sort', 'text', dict.column_size);
     rename('#fileListHead .column-time .file-sort', 'text', dict.column_time);
@@ -1263,8 +1138,8 @@ function translate_dynamic() {
 	}
 }
 
-function translate_PanelUpload(id) {
-    id = '#' + id;
+function translate_PanelUpload(el) {
+    var id = '#' + el.id;
     rename(id + ' .hd h3', 'text', dict.PanelUpload_hd);
     rename(id + ' .plugin-tip', 'text', dict.PanelUpload_pluginTip);
     rename(id + ' .plugin-tip a', 'text', dict.PanelUpload_pluginTip_a);
@@ -1291,6 +1166,8 @@ function translate_PanelUpload(id) {
     document.querySelector(id + ' .drag-tip p').style.display = 'block';
     var path = document.getElementById('curUploadPath').textContent;
     var new_path = dict.leftPanel_file;
+    console.log(path);
+    console.log(new_path);
     if (path.indexOf('/') >= 0) {
         var dir = path.slice(path.indexOf('/'));
         new_path = dict.leftPanel_file + dir;
@@ -1324,35 +1201,6 @@ function translate_PanelUpload(id) {
     rename(id + ' #uploadItemList li em', 'title', dict.PanelUpload_em);
 }
 
-function translate_PanelOffdl(el) {
-    rename(el.querySelector('.ui-dialog-title'), 'text', dict.PanelOffdl_hd);
-    rename(el.querySelector('.offdl-title'), 'text', dict.PanelOffdl_offdlTitle1, 0);
-    rename(el.querySelector('.offdl-title'), 'text', dict.PanelOffdl_offdlTitle2, 1);
-    rename(el.querySelector('.offdl-btn-create .label'), 'text', dict.PanelOffdl_offdlBtnCreate);
-    rename(el.querySelector('.column-name'), 'text', dict.PanelOffdl_columnName);
-    rename(el.querySelector('.column-size'), 'text', dict.PanelOffdl_columnSize);
-    rename(el.querySelector('.column-status'), 'text', dict.PanelOffdl_columnStatus);
-    rename(el.querySelector('.column-op'), 'text', dict.PanelOffdl_columnOp);
-    rename(el.querySelector('.offdl-save-tip'), 'text', dict.PanelOffdl_offdlSaveTip1, 0);
-    rename(el.querySelector('.offdl-save-tip'), 'text', dict.PanelOffdl_offdlSaveTip2, 1);
-    rename(el.querySelector('.offdl-save-tip strong'), 'text', dict.PanelOffdl_offdlSaveTip_s);
-    rename(el.querySelector('.offdl-btn-box .y-btn .label'), 'text', dict.PanelOffdl_background);
-    rename(el.querySelector('.offdl-btn-box .y-btn:last-child .label'), 'text', dict.PanelOffdl_clean);
-    rename(el.querySelector('.ui-dialog-titlebar-close .ui-button-text'), 'text', dict.BasePanel_closeLink);
-}
-function translate_PanelOffdlCreate(el) {
-    rename(el.querySelector('.ui-dialog-title'), 'text', dict.PanelOffdlCreate_hd);
-    rename(el.querySelector('.offdl-title'), 'text', dict.PanelOffdlCreate_offdlTitle);
-    rename(el.querySelector('.offdl-placeholder'), 'text', dict.PanelOffdlCreate_placeholder);
-    rename(el.querySelector('#offdlUrl'), 'placeholder', dict.PanelOffdlCreate_placeholder);
-    rename(el.querySelector('.offdl-save-tip'), 'text', dict.PanelOffdl_offdlSaveTip1, 0);
-    rename(el.querySelector('.offdl-save-tip'), 'text', dict.PanelOffdl_offdlSaveTip2, 1);
-    rename(el.querySelector('.offdl-save-tip strong'), 'text', dict.PanelOffdl_offdlSaveTip_s);
-    rename(el.querySelector('.offdl-btn-box .y-btn'), 'text', dict.PanelOffdlCreate_cancel);
-    rename(el.querySelector('.offdl-btn-box .y-btn:last-child'), 'text', dict.PanelOffdlCreate_start);
-    rename(el.querySelector('.ui-dialog-titlebar-close .ui-button-text'), 'text', dict.BasePanel_closeLink);
-}
-
 function translate_PanelFileBox(id) {
     id = '#' + id;
     rename(id + ' .hd h3', 'text', dict.PanelFileBox_hd);
@@ -1380,21 +1228,70 @@ function translate_PanelLottery(id) {
     document.querySelector(id + ' .tencent').style.right = '30px';
 }
 
-function translate_dialogTitlebar(el) {
+function translate_dialogTitlebar(el, title) {
+
     rename(el.querySelector('.ui-dialog-titlebar-close'), 'title', dict.dialogTitlebarClose);
     rename(el.querySelector('.ui-dialog-titlebar-close .ui-button-text'), 'text', dict.dialogTitlebarClose);
     rename(el.querySelector('.ui-dialog-titlebar-minimize'), 'title', dict.dialogTitlebarMinimize);
     rename(el.querySelector('.ui-dialog-titlebar-minimize .ui-button-text'), 'text', dict.dialogTitlebarMinimize);
     rename(el.querySelector('.ui-dialog-titlebar-maximize'), 'title', dict.dialogTitlebarMaximize);
     rename(el.querySelector('.ui-dialog-titlebar-maximize .ui-button-text'), 'text', dict.dialogTitlebarMaximize);
+
+    if (title) {
+        rename(el.querySelector('.ui-dialog-title'), 'text', title);
+    }
+}
+
+function translate_dialogBaseBtn(el) {
+
+	rename(el.querySelector('.ui-dialog-buttonset .ui-button-blue .ui-button-text'), 'text', dict.dialogBtnOk);
+	rename(el.querySelector('.ui-dialog-buttonset .ui-button-gray .ui-button-text'), 'text', dict.dialogBtnCancel);
+}
+
+function translate_dialogOffdl(el) {
+
+    translate_dialogTitlebar(el, dict.PanelOffdl_hd);
+    rename(el.querySelector('.offdl-title'), 'text', dict.PanelOffdl_offdlTitle1, 0);
+    rename(el.querySelector('.offdl-title'), 'text', dict.PanelOffdl_offdlTitle2, 1);
+    rename(el.querySelector('.offdl-btn-create .label'), 'text', dict.PanelOffdl_offdlBtnCreate);
+    rename(el.querySelector('.column-name'), 'text', dict.PanelOffdl_columnName);
+    rename(el.querySelector('.column-size'), 'text', dict.PanelOffdl_columnSize);
+    rename(el.querySelector('.column-status'), 'text', dict.PanelOffdl_columnStatus);
+    rename(el.querySelector('.column-op'), 'text', dict.PanelOffdl_columnOp);
+    rename(el.querySelector('.offdl-save-tip'), 'text', dict.PanelOffdl_offdlSaveTip1, 0);
+    rename(el.querySelector('.offdl-save-tip'), 'text', dict.PanelOffdl_offdlSaveTip2, 1);
+    rename(el.querySelector('.offdl-save-tip strong'), 'text', dict.PanelOffdl_offdlSaveTip_s);
+    rename(el.querySelector('.offdl-btn-box .y-btn .label'), 'text', dict.PanelOffdl_background);
+    rename(el.querySelector('.offdl-btn-box .y-btn:last-child .label'), 'text', dict.PanelOffdl_clean);
+}
+function translate_dialogOffdlCreate(el) {
+
+    translate_dialogTitlebar(el, dict.PanelOffdlCreate_hd);
+    rename(el.querySelector('.offdl-title'), 'text', dict.PanelOffdlCreate_offdlTitle);
+    rename(el.querySelector('.offdl-placeholder'), 'text', dict.PanelOffdlCreate_placeholder);
+    rename(el.querySelector('#offdlUrl'), 'placeholder', dict.PanelOffdlCreate_placeholder);
+    rename(el.querySelector('.offdl-save-tip'), 'text', dict.PanelOffdl_offdlSaveTip1, 0);
+    rename(el.querySelector('.offdl-save-tip'), 'text', dict.PanelOffdl_offdlSaveTip2, 1);
+    rename(el.querySelector('.offdl-save-tip strong'), 'text', dict.PanelOffdl_offdlSaveTip_s);
+    rename(el.querySelector('.offdl-btn-box .y-btn'), 'text', dict.PanelOffdlCreate_cancel);
+    rename(el.querySelector('.offdl-btn-box .y-btn:last-child'), 'text', dict.PanelOffdlCreate_start);
+}
+
+function translate_dialogDel(el) {
+	translate_dialogTitlebar(el, dict.dialogDel_title);
+	rename(el.querySelector('.ui-dia-msg-text p:first-child'), 'text', dict.dialogDel_msg1, 0);
+	rename(el.querySelector('.ui-dia-msg-text p:first-child'), 'text', dict.dialogDel_msg2, 1);
+	rename(el.querySelector('.ui-dia-msg-text .info'), 'text', dict.dialogDel_msgInfo);
+	translate_dialogBaseBtn(el);
 }
 
 function translate_McPlayer(el) {
+
     translate_dialogTitlebar(el);
     rename(el.querySelector('.mc-control-pre'), 'title', dict.player_pre);
     rename(el.querySelector('.mc-control-play'), 'title', dict.player_play);
     rename(el.querySelector('.mc-control-next'), 'title', dict.player_next);
-    rename(el.querySelector('.cycle'), 'title', dict.player_cycle);
+    rename(el.querySelector('ul .cycle'), 'title', dict.player_cycle);
     rename(el.querySelector('.random'), 'title', dict.player_random);
     rename(el.querySelector('.single'), 'title', dict.player_single);
     rename(el.querySelector('.volume'), 'title', dict.player_volume);
@@ -1407,11 +1304,9 @@ function translate_McPlayer(el) {
 }
 
 function create_observerPanel(node, func) {
+
     var observer = new MutationObserver(function(mutations) {
         func(node);
-        //mutations.forEach(function(mutation) {
-        //    func(node);
-        //});
     });
     var config = {
         attributes: false,
@@ -1420,6 +1315,159 @@ function create_observerPanel(node, func) {
         subtree: true
     };
     observer.observe(node, config);
+}
+
+function translate_photoLeftPanel() {
+
+	rename('#leftPanel .all-photo .title', 'text', dict.leftPanel_allPhoto, 1);
+	rename('#leftPanel .private-album .title', 'text', dict.leftPanel_privateAlbum, 1);
+	rename('#leftPanel .share-album .title', 'text', dict.leftPanel_shareAlbum, 1);
+
+}
+
+function translate_photoCrumb() {
+
+	rename('.toolbar .title', 'text', document.querySelector('#leftPanel .current .title').textContent);
+	//rename('.toolbar .album-list-root', 'text', dict.leftPanel_privateAlbum);
+}
+
+function translate_photoToolbar_btn() {
+
+	rename('#tbUploadBtn .label', 'text', dict.toolbarPhoto_tbUploadBtn);
+	rename('#tbUploadBtn', 'title', dict.toolbarPhoto_tbUploadBtn);
+	rename('.tb-btn-add .label', 'text', dict.toolbarPhoto_tbBtnAdd);
+	rename('.tb-btn-add', 'title', dict.toolbarPhoto_tbBtnAdd);
+	rename('.tb-btn-createalbum-private .label', 'text', dict.toolbarPhoto_tbBtnCreatealbumPrivate);
+	rename('.tb-btn-createalbum-private', 'title', dict.toolbarPhoto_tbBtnCreatealbumPrivate);
+	rename('.tb-btn-createalbum-share .label', 'text', dict.toolbarPhoto_tbBtnCreatealbumShare);
+	rename('.tb-btn-createalbum-share', 'title', dict.toolbarPhoto_tbBtnCreatealbumShare);
+	rename('.tb-btn-timeline .label', 'text', dict.toolbarPhoto_tbBtnTimeline);
+	//rename('.tb-btn-timeline', 'title', dict.toolbarPhoto_tbBtnTimeline);
+	rename('.tb-btn-batch .label', 'text', dict.toolbarPhoto_tbBtnBatch);
+	//rename('.tb-btn-batch', 'title', dict.toolbarPhoto_tbBtnBatch);
+	rename('.tb-btn-more .label', 'text', dict.toolbarPhoto_tbBtnMore);
+	//rename('.tb-btn-more', 'title', dict.toolbarPhoto_tbBtnMore);
+	rename('.tb-btn-dl .label', 'text', dict.toolbarPhoto_tbBtnDl);
+	rename('.tb-btn-dl', 'title', dict.toolbarPhoto_tbBtnDl);
+	rename('.tb-btn-del .label', 'text', dict.toolbarPhoto_tbBtnDel);
+	rename('.tb-btn-del', 'title', dict.toolbarPhoto_tbBtnDel);
+	rename('.tb-btn-del-from-album .label', 'text', dict.toolbarPhoto_tbBtnDelFromAlbum);
+	//rename('.tb-btn-del-from-album', 'title', dict.toolbarPhoto_tbBtnDelFromAlbum);
+	rename('.tb-btn-move .label', 'text', dict.toolbarPhoto_tbBtnMove);
+	//rename('.tb-btn-move', 'title', dict.toolbarPhoto_tbBtnMove);
+	rename('.tb-btn-done .label', 'text', dict.toolbarPhoto_tbBtnDone);
+	//rename('.tb-btn-done', 'title', dict.toolbarPhoto_tbBtnDone);
+}
+
+function translate_photoToolbar_timeline() {
+
+	var timelineMenu = document.getElementById('timeline-menu');
+	if (!timelineMenu) {
+		var menus = document.querySelectorAll('.ui-menu-with-icon');
+		if (menus) {
+			for (var i = 0; i < menus.length; i++) {
+				if (menus[i].textContent == '最近上传按年分组按月分组按天分组') {
+					timelineMenu = menus[i];
+					timelineMenu.id = 'timeline-menu';
+				}
+			}
+		}
+	}
+
+	if (timelineMenu) {
+		var menuItems = timelineMenu.querySelectorAll('.ui-menu-item .text');
+		if (menuItems) {
+			rename(menuItems[0], 'text', dict.toolbarPhoto_timeline0);
+			rename(menuItems[1], 'text', dict.toolbarPhoto_timeline1);
+			rename(menuItems[2], 'text', dict.toolbarPhoto_timeline2);
+			rename(menuItems[3], 'text', dict.toolbarPhoto_timeline3);
+		}
+	}
+}
+
+function translate_photoToolbar_newAlbum() {
+	var menus = document.querySelectorAll('.ui-menu-with-icon');
+	if (menus) {
+		for (var i = 0; i < menus.length; i++) {
+			if (menus[i].textContent.indexOf('新建个人相册') >= 0) {
+				var elMenu = menus[i].querySelector('.ui-menu-item .text');
+				rename(elMenu, 'text', dict.toolbarPhoto_newAlbum);
+			}
+			if (menus[i].textContent.indexOf(dict.toolbarPhoto_newAlbum) >= 0) {
+				var elInput = menus[i].querySelector('.create-album-input');
+				rename(elInput, 'placeholder', dict.toolbarPhoto_newAlbumName);
+			}
+		}
+	}
+}
+
+function translate_photoToolbar_add() {
+	if (document.getElementById('menu-add')) return;
+	var menus = document.querySelectorAll('.ui-menu');
+	if (menus) {
+		for (var i = 0; i < menus.length; i++) {
+			if (menus[i].textContent == '从本地上传添加已有照片') {
+				menus[i].id = 'menu-add';
+				var items = menus[i].querySelectorAll('.ui-menu-item .text');
+				rename(items[0], 'text', dict.toolbarPhoto_add0);
+				rename(items[1], 'text', dict.toolbarPhoto_add1);
+			}
+		}
+	}
+}
+
+function translate_photoToolbar_more() {
+	var menus = document.querySelectorAll('.ui-menu');
+	if (menus) {
+		for (var i = 0; i < menus.length; i++) {
+			if (menus[i].textContent == '批量管理删除此相册') {
+				var items = menus[i].querySelectorAll('.ui-menu-item .text');
+				rename(items[0], 'text', dict.toolbarPhoto_more0);
+				rename(items[1], 'text', dict.toolbarPhoto_more1);
+			}
+		}
+	}
+}
+
+function translate_photoToolbar() {
+
+	translate_photoToolbar_btn();
+}
+
+function translate_photoWaterfall() {
+
+	var separator = '-';
+
+	var nodes = document.querySelectorAll('.waterfall-toolbar .toolbar-title');
+	if (nodes) {
+		var text;
+		for (var i=0; i<nodes.length; i++) {
+			if (nodes[i].classList.contains('translated')) continue;
+			text = nodes[i].textContent;
+			for (ch in dict.toolbarPhoto_date) {
+				text = text.replace(ch, separator);
+			}
+			if (text.charAt(text.length-1) === separator) {
+				text = text.slice(0, -1);
+			}
+			nodes[i].classList.add('translated');
+			nodes[i].textContent = text;
+		}
+	}
+
+	var nodesCount = document.querySelectorAll('.waterfall-toolbar .toolbar-count');
+	if (nodes) {
+		var textCount;
+		for (var j=0; j<nodesCount.length; j++) {
+			if (nodesCount[j].classList.contains('translated')) continue;
+			textCount = nodesCount[j].textContent;
+			textCount = textCount.replace('张', dict.toolbarPhoto_count);
+			nodesCount[j].classList.add('translated');
+			nodesCount[j].textContent = textCount;
+		}
+	}
+
+	rename('.waterfall-toolbar .chkall', 'text', dict.toolbarPhoto_chkall);
 }
 
 

@@ -1,0 +1,14 @@
+	'player_pre'      : 'Предыдущий трек',   // 上一首
+	'player_play'     : 'Пауза [Играть]',   // 暂停[播放]
+	'player_next'     : 'Следующий трек',   // 下一首
+	'player_cycle'    : 'Повторять',   // 顺序播放
+	'player_random'   : 'Воспроизведение в случайном порядке',   // 随机播放
+	'player_single'   : 'Один цикл',   // 单曲循环
+	'player_volume'   : 'Без звука',   // 静音
+	'player_btnPlay'  : 'Играть',   // 播放
+	'player_btnPause' : 'Пауза',   // 暂停
+	'player_btnDel'   : 'Удалить',   // 删除
+	'player_selectAll': 'Выбрать все',   // 全选
+	'player_remove'   : 'Удалить',   // 删除
+	'player_empty'    : 'Очистить список',   // 清空列表
+

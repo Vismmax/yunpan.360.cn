@@ -1,10 +1,10 @@
-//#include translate.dialogTitlebar.js
 function translate_McPlayer(el) {
+
     translate_dialogTitlebar(el);
     rename(el.querySelector('.mc-control-pre'), 'title', dict.player_pre);
     rename(el.querySelector('.mc-control-play'), 'title', dict.player_play);
     rename(el.querySelector('.mc-control-next'), 'title', dict.player_next);
-    rename(el.querySelector('.cycle'), 'title', dict.player_cycle);
+    rename(el.querySelector('ul .cycle'), 'title', dict.player_cycle);
     rename(el.querySelector('.random'), 'title', dict.player_random);
     rename(el.querySelector('.single'), 'title', dict.player_single);
     rename(el.querySelector('.volume'), 'title', dict.player_volume);

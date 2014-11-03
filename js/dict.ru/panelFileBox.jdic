@@ -1,0 +1,5 @@
+	'PanelFileBox_hd'    : 'Переместить файл (папку)',   // 移动文件（夹）
+	'PanelFileBox_msg'   : 'Выберите место для перемещения',   // 选择移动到的位置
+	'PanelFileBox_move'  : 'Переместить',   // 确定移动
+	'PanelFileBox_cancel': 'Отмена',   // 取消
+

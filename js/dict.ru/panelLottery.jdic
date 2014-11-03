@@ -1,0 +1,11 @@
+	'PanelLottery_content0_p1'   : 'Вы выиграли ',   // 恭喜您，本次抽奖获得了
+	'PanelLottery_content0_p2'   : ' свободного места.',   // 永久免费空间。
+	'PanelLottery_stars'         : 'Удача: ',   // 幸运指数：
+	'PanelLottery_sina'          : 'В Weibo',   // 转发到新浪微博
+	'PanelLottery_tencent'       : 'В Tencent',   // 转发到腾讯微博
+	'PanelLottery_lotteryRecords': 'Мои призы',   // 查看抽奖记录
+	'PanelLottery_content1_p1'   : 'Розыгрыш не удался!',   // 抱歉，抽奖失败！
+	'PanelLottery_content1_p2'   : 'Попробуйте позже.',   // 请稍后重试。
+	'PanelLottery_content2_p1'   : 'Вы участвовали!',   // 今日已抽奖！
+	'PanelLottery_content2_p2'   : 'Попробуйте завтра.',   // 请明日再来。
+

@@ -1,0 +1,7 @@
+	'column_name': 'Имя файла',   // 文件名
+	'column_size': 'Размер',   // 大小
+	'column_time': 'Дата',   // 修改日期
+	'column_code': 'Код',   // 提取码
+	'column_hit' : 'Загрузки',   // 下载次数
+	'column_path': 'Каталог',   // 所在目录
+

@@ -1,6 +1,6 @@
 function translate_header() {
     rename('title', 'text', dict.title);
-    rename('a.logo', 'text', dict.logo);
+    rename('a.logo', 'text', dict.nav_logo);
     rename('.nav a[href="http://huodong.yunpan.360.cn/xt"]', 'text', dict.nav_36);
     rename('.nav a[href="/"]', 'text', dict.nav_home);
     rename('.nav a[href="http://yunpan.360.cn/"]', 'text', dict.nav_home);

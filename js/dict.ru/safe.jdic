@@ -1,0 +1,4 @@
+	// sfile
+	'safe_openPass'       : 'Войти',   // 启用保险箱
+	'safe_previewInitFile': 'Узнать',   // 简单了解一下
+

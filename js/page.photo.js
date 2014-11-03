@@ -4,141 +4,24 @@ if (window.location.hostname.indexOf('photo') === 0) {
 
 	translate_topPanel();
 	translate_userInfo();
-	translate_leftPanelPhoto();
-	translate_toolbarPhoto();
-
-	//translate_fileListHistory();
-	//translate_column();
-	//translate_safe();
-	//translate_loadingMask();
+	translate_photoLeftPanel();
+	translate_photoToolbar();
+	translate_photoCrumb();
 
 	var target = document.getElementsByTagName('body')[0];
 	var observer = new MutationObserver(function (mutations) {
 
-		//console.log('mutationPhoto');
+		runAsync(translate_photoCrumb);
+		runAsync(translate_photoToolbar_timeline);
+		runAsync(translate_photoToolbar_newAlbum);
+		runAsync(translate_photoToolbar_add);
+		runAsync(translate_photoToolbar_more);
+		runAsync(translate_photoWaterfall);
 
-		runAsync(translate_crumbPhoto);
-		//runAsync(translate_loadingMask);
-		//runAsync(translate_dropOverlay);
-		//runAsync(translate_toolbar);
-		//runAsync(translate_column);
-		//runAsync(translate_copyBox);
-		//runAsync(translate_x_yp_1);
-		//runAsync(translate_x_yp_2);
-		//runAsync(translate_x_yp_3);
-		//runAsync(translate_x_yp_4);
-		//runAsync(translate_pageNav);
-		//runAsync(translate_search);
-		//runAsync(translate_dynamic);
+		rename('.upload-btn', 'title', dict.toolbarPhoto_tbUploadBtn);
+		rename('.waterfall-preloading', 'text', dict.toolbarPhoto_load);
+		rename('.mod-imgthumb-createalbum .input-text', 'placeholder', dict.toolbarPhoto_newAlbumName);
 
-		mutations.forEach(function (mutation) {
-
-			if (mutation.addedNodes.length) {
-				//var addedNoda = mutation.addedNodes[0];
-
-				//if (addedNoda.id === 'loadingMask') {
-				//    translate_loadingMask();
-				//}
-				//if (addedNoda.id === 'dropOverlay') {
-				//    translate_dropOverlay();
-				//}
-				//if (mutation.target.classList.contains('toolbar')) {
-				//    translate_toolbar();
-				//}
-				//if (mutation.target.id === 'crumb') {
-				//    translate_crumb();
-				//}
-				//if (mutation.target.classList.contains('path-item')) {
-				//    translate_crumb();
-				//}
-				//if (mutation.target.id === 'fileListHead') {
-				//    translate_column();
-				//}
-				//if (addedNoda.id === 'sfile-openSfile') {
-				//    translate_column();
-				//}
-				//if (addedNoda.id === 'list') {
-				//    translate_copyBox();
-				//}
-				//if (addedNoda.id === 'x-yp-1') {
-				//    translate_x_yp_1();
-				//}
-				//if (addedNoda.id === 'x-yp-2') {
-				//    translate_x_yp_2();
-				//}
-				//if (addedNoda.id === 'x-yp-3') {
-				//    translate_x_yp_3();
-				//}
-				//if (addedNoda.id === 'x-yp-4') {
-				//    translate_x_yp_4();
-				//}
-				//translate_toolbar();
-				//translate_crumb();
-				//translate_column();
-				//translate_loadingMask();
-				//if (mutation.addedNodes.length) {
-				//    var i;
-				//    for (i = 0; i < mutation.addedNodes.length; i++) {
-				//        if (mutation.addedNodes[i].classList.contains('file-list-head')) {
-				//            translate_column();
-				//        }
-				//        if (mutation.addedNodes[i].classList.contains('page-nav')) {
-				//            translate_pageNav();
-				//        }
-				//    }
-				//}
-				//if (addedNoda.classList.contains('panel')) {
-				//
-				//	if (addedNoda.getElementsByClassName('upload-toolbar').length) {
-				//		translate_PanelUpload(addedNoda.id);
-				//		create_observerPanel(addedNoda, translate_PanelUpload);
-				//	}
-				//
-				//	//if (addedNoda.getElementsByClassName('offdl-dia').length) {
-				//	//    create_observerPanel(addedNoda, translate_PanelOffdl);
-				//	//    translate_PanelOffdl(addedNoda);
-				//	//}
-				//
-				//	//if (addedNoda.getElementsByClassName('offdl-dia-create').length) {
-				//	//    translate_PanelOffdlCreate(addedNoda);
-				//	//}
-				//
-				//	if (addedNoda.getElementsByClassName('fileBox').length) {
-				//		translate_PanelFileBox(addedNoda.id);
-				//		create_observerPanel(addedNoda, translate_PanelFileBox);
-				//	}
-				//
-				//	if (addedNoda.getElementsByClassName('sina').length) {
-				//		translate_PanelLottery(addedNoda.id);
-				//	}
-				//}
-				//if (addedNoda.classList.contains('ui-dialog')) {
-				//
-				//	if (addedNoda.getElementsByClassName('offdl-dia').length) {
-				//		create_observerPanel(addedNoda, translate_PanelOffdl);
-				//		translate_PanelOffdl(addedNoda);
-				//	}
-				//
-				//	if (addedNoda.getElementsByClassName('offdl-dia-create').length) {
-				//		translate_PanelOffdlCreate(addedNoda);
-				//	}
-				//
-				//	if (addedNoda.getElementsByClassName('fileBox').length) {
-				//		translate_PanelFileBox(addedNoda.id);
-				//		create_observerPanel(addedNoda, translate_PanelFileBox);
-				//	}
-				//
-				//	//if (addedNoda.getElementsByClassName('sina').length) {
-				//	//    translate_PanelLottery(addedNoda.id);
-				//	//}
-				//}
-				//
-				//if (addedNoda.classList.contains('mc-player')) {
-				//	translate_McPlayer(addedNoda);
-				//	create_observerPanel(addedNoda, translate_McPlayer);
-				//}
-			}
-		});
 	});
 	var config = {
 		attributes   : false,

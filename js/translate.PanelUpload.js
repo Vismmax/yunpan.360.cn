@@ -1,5 +1,5 @@
-function translate_PanelUpload(id) {
-    id = '#' + id;
+function translate_PanelUpload(el) {
+    var id = '#' + el.id;
     rename(id + ' .hd h3', 'text', dict.PanelUpload_hd);
     rename(id + ' .plugin-tip', 'text', dict.PanelUpload_pluginTip);
     rename(id + ' .plugin-tip a', 'text', dict.PanelUpload_pluginTip_a);
@@ -26,6 +26,8 @@ function translate_PanelUpload(id) {
     document.querySelector(id + ' .drag-tip p').style.display = 'block';
     var path = document.getElementById('curUploadPath').textContent;
     var new_path = dict.leftPanel_file;
+    console.log(path);
+    console.log(new_path);
     if (path.indexOf('/') >= 0) {
         var dir = path.slice(path.indexOf('/'));
         new_path = dict.leftPanel_file + dir;

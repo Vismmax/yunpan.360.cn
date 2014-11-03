@@ -1,0 +1,14 @@
+	'leftPanel_file'     : 'Все файлы', // 全部文件
+	'leftPanel_video'    : 'Видео', // 视频
+	'leftPanel_music'    : 'Музыка', // 音乐
+	'leftPanel_text'     : 'Документы', // 文档
+	'leftPanel_img'      : 'Фотографии', // 图片
+	'leftPanel_se'       : 'Из браузера', // 来自浏览器
+	'leftPanel_sFile'    : 'Сейф', // 保险箱
+	'leftPanel_link'     : 'Расшаренные', // 我的分享
+	'leftPanel_group'    : 'Группы', // 我的共享群
+	'leftPanel_recycle'  : 'Корзина', // 回收站
+	'leftPanel_dynamic'  : 'История', // 操作历史
+	'leftPanel_space'    : '++', // 扩容
+	'leftPanel_copyright': 'Авторское право', // 版权保护投诉指引
+

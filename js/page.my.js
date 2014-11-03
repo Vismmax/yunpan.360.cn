@@ -89,18 +89,9 @@ if (window.location.pathname.indexOf('/my') === 0) {
                 if (addedNoda.classList.contains('panel')) {
 
                     if (addedNoda.getElementsByClassName('upload-toolbar').length) {
-                        translate_PanelUpload(addedNoda.id);
+                        translate_PanelUpload(addedNoda);
                         create_observerPanel(addedNoda, translate_PanelUpload);
                     }
-
-                    //if (addedNoda.getElementsByClassName('offdl-dia').length) {
-                    //    create_observerPanel(addedNoda, translate_PanelOffdl);
-                    //    translate_PanelOffdl(addedNoda);
-                    //}
-
-                    //if (addedNoda.getElementsByClassName('offdl-dia-create').length) {
-                    //    translate_PanelOffdlCreate(addedNoda);
-                    //}
 
                     if (addedNoda.getElementsByClassName('fileBox').length) {
                         translate_PanelFileBox(addedNoda.id);
@@ -114,17 +105,23 @@ if (window.location.pathname.indexOf('/my') === 0) {
                 if (addedNoda.classList.contains('ui-dialog')) {
 
                     if (addedNoda.getElementsByClassName('offdl-dia').length) {
-                        create_observerPanel(addedNoda, translate_PanelOffdl);
-                        translate_PanelOffdl(addedNoda);
+                        translate_dialogOffdl(addedNoda);
+                        create_observerPanel(addedNoda, translate_dialogOffdl);
                     }
 
                     if (addedNoda.getElementsByClassName('offdl-dia-create').length) {
-                        translate_PanelOffdlCreate(addedNoda);
+                        translate_dialogOffdlCreate(addedNoda);
                     }
 
                     if (addedNoda.getElementsByClassName('fileBox').length) {
                         translate_PanelFileBox(addedNoda.id);
                         create_observerPanel(addedNoda, translate_PanelFileBox);
+                    }
+
+                    if (addedNoda.getElementsByClassName('ui-dialog-title').length) {
+                        if (addedNoda.querySelector('.ui-dialog-title').textContent == '删除') {
+                            translate_dialogDel(addedNoda);
+                        }
                     }
 
                     //if (addedNoda.getElementsByClassName('sina').length) {

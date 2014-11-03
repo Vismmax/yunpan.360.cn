@@ -1,0 +1,4 @@
+	'fileListHistory_columnHisversionid': 'Версия',   // 时光号
+	'fileListHistory_columnHissize'     : 'Размер',   // 大小
+	'fileListHistory_columnHistime'     : 'Дата изменения',   // 修改日期
+

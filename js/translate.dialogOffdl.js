@@ -1,5 +1,6 @@
-function translate_PanelOffdl(el) {
-    rename(el.querySelector('.ui-dialog-title'), 'text', dict.PanelOffdl_hd);
+function translate_dialogOffdl(el) {
+
+    translate_dialogTitlebar(el, dict.PanelOffdl_hd);
     rename(el.querySelector('.offdl-title'), 'text', dict.PanelOffdl_offdlTitle1, 0);
     rename(el.querySelector('.offdl-title'), 'text', dict.PanelOffdl_offdlTitle2, 1);
     rename(el.querySelector('.offdl-btn-create .label'), 'text', dict.PanelOffdl_offdlBtnCreate);
@@ -12,5 +13,4 @@ function translate_PanelOffdl(el) {
     rename(el.querySelector('.offdl-save-tip strong'), 'text', dict.PanelOffdl_offdlSaveTip_s);
     rename(el.querySelector('.offdl-btn-box .y-btn .label'), 'text', dict.PanelOffdl_background);
     rename(el.querySelector('.offdl-btn-box .y-btn:last-child .label'), 'text', dict.PanelOffdl_clean);
-    rename(el.querySelector('.ui-dialog-titlebar-close .ui-button-text'), 'text', dict.BasePanel_closeLink);
 }

@@ -1,0 +1,12 @@
+	'userInfo_profile'   : 'Профиль', // 帐号中心
+	'userInfo_auth'      : 'Сертификация', // 申请个人认证
+	'userInfo_message'   : 'Сообщения', // 云盘消息
+	'userInfo_ypLevel'   : 'Уровень', // 云盘等级
+	'userInfo_volRecords': 'Записи', // 扩容记录
+	'userInfo_recharge'  : 'Обновление', // 空间升级卡
+	'userInfo_inviteFri' : 'Пригласить друга', // 邀请好友
+	'userInfo_tpFeedback': 'Форум', // 意见反馈
+	'userInfo_tpHelp'    : 'Помощь', // 帮助中心
+	'userInfo_lottery'   : 'Лотерея', // 每日抽奖
+	'userInfo_tpExit'    : 'Выход', // 退出云盘
+
