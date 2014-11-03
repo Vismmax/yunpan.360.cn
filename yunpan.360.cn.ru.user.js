@@ -55,7 +55,7 @@ var dict = {
 	'login_submit'         : 'Войти',   // 登录
 	'login_submit_go'      : 'Вход',   // 登录中
 	'login_reg'            : 'Регистрация',   // 注册360账号
-	'login_goMy'           : 'Войти в облоко',   // 进入我的云盘
+	'login_goMy'           : 'Войти в облако',   // 进入我的云盘
 	'login_info_p'         : 'Вы вошли как:',   // 您当前正在使用的云盘帐号是：
 	'login_logout'         : 'Выход>>',   // 更换帐号&gt;&gt;
 	'login_dl_pc'          : 'PC с синхронизацией',   // PC同步版下载
@@ -521,6 +521,7 @@ if (window.location.pathname.indexOf('/my') === 0) {
                         translate_PanelLottery(addedNoda.id);
                     }
                 }
+
                 if (addedNoda.classList.contains('ui-dialog')) {
 
                     if (addedNoda.getElementsByClassName('offdl-dia').length) {
@@ -542,10 +543,6 @@ if (window.location.pathname.indexOf('/my') === 0) {
                             translate_dialogDel(addedNoda);
                         }
                     }
-
-                    //if (addedNoda.getElementsByClassName('sina').length) {
-                    //    translate_PanelLottery(addedNoda.id);
-                    //}
                 }
 
                 if (addedNoda.classList.contains('mc-player')) {

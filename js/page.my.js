@@ -103,6 +103,7 @@ if (window.location.pathname.indexOf('/my') === 0) {
                         translate_PanelLottery(addedNoda.id);
                     }
                 }
+
                 if (addedNoda.classList.contains('ui-dialog')) {
 
                     if (addedNoda.getElementsByClassName('offdl-dia').length) {
@@ -124,10 +125,6 @@ if (window.location.pathname.indexOf('/my') === 0) {
                             translate_dialogDel(addedNoda);
                         }
                     }
-
-                    //if (addedNoda.getElementsByClassName('sina').length) {
-                    //    translate_PanelLottery(addedNoda.id);
-                    //}
                 }
 
                 if (addedNoda.classList.contains('mc-player')) {
