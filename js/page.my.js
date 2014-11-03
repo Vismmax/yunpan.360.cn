@@ -86,6 +86,7 @@ if (window.location.pathname.indexOf('/my') === 0) {
                 //        }
                 //    }
                 //}
+
                 if (addedNoda.classList.contains('panel')) {
 
                     if (addedNoda.getElementsByClassName('upload-toolbar').length) {
